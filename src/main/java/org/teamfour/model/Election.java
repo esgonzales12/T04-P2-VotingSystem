@@ -1,8 +1,8 @@
 package org.teamfour.model;
 
 public class Election {
-    private final String location;
     private final Integer id;
+    private final String location;
     private final String startDate;
     private final String endDate;
 
@@ -29,5 +29,13 @@ public class Election {
         return endDate;
     }
 
-
+    @Override
+    public String toString() {
+        return "Election{" +
+                "location='" + location + '\'' +
+                ", id=" + id +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                '}';
+    }
 }

@@ -1,13 +1,16 @@
 package org.teamfour.model;
 
 public class OfficeCandidate {
+    private final Integer id;
+    private final Integer officeId;
+    private final Integer electionId;
     private final String firstname;
     private final String lastname;
     private final String party;
-    private final Integer electionId;
-    private final Integer officeId;
 
-    public OfficeCandidate(String firstname, String lastname, String party, Integer electionId, Integer officeId) {
+    public OfficeCandidate(Integer id, String firstname, String lastname,
+                           String party, Integer electionId, Integer officeId) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.party = party;
@@ -33,5 +36,17 @@ public class OfficeCandidate {
 
     public Integer getOfficeId() {
         return officeId;
+    }
+
+    @Override
+    public String toString() {
+        return "OfficeCandidate{" +
+                "id=" + id +
+                ", officeId=" + officeId +
+                ", electionId=" + electionId +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", party='" + party + '\'' +
+                "}\n";
     }
 }
