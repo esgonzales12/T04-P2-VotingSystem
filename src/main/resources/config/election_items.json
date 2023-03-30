@@ -1,0 +1,52 @@
+[
+  {
+    "itemName": "H.R.1 — For the People Act of 2023",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "H.R.1839 — To prohibit certain uses of xylazine, and for other purposes",
+    "electionId": 12345,
+    "allowedSelections": 2
+  },
+  {
+    "itemName": "H.R.40 — Commission to Study and Develop Reparation Proposals for African-Americans Act",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "S.1 — Democracy Restoration Act of 2023",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "S.51 — Washington, D.C. Admission Act",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "H.R.5 — Equality Act",
+    "electionId": 12345,
+    "allowedSelections": 3
+  },
+  {
+    "itemName": "H.R.1063 — To require certain warning labels to be placed on video games",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "H.R.3979 — National Apprenticeship Act of 2023",
+    "electionId": 12345,
+    "allowedSelections": 2
+  },
+  {
+    "itemName": "H.R.7 — Paycheck Fairness Act",
+    "electionId": 12345,
+    "allowedSelections": 1
+  },
+  {
+    "itemName": "S.65 — Renewable Energy and Energy Conservation Tax Act of 2023",
+    "electionId": 12345,
+    "allowedSelections": 1
+  }
+]

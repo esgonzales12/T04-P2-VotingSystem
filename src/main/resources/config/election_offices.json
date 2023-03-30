@@ -1,0 +1,52 @@
+[
+  {
+    "officeName": "President",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "Senator",
+    "allowedSelections": 2,
+    "electionId": 12345
+  },
+  {
+    "officeName": "Governor",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "Mayor",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "City Council",
+    "allowedSelections": 3,
+    "electionId": 12345
+  },
+  {
+    "officeName": "School Board",
+    "allowedSelections": 2,
+    "electionId": 12345
+  },
+  {
+    "officeName": "Sheriff",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "District Attorney",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "State Representative",
+    "allowedSelections": 1,
+    "electionId": 12345
+  },
+  {
+    "officeName": "County Commissioner",
+    "allowedSelections": 2,
+    "electionId": 12345
+  }
+]
