@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         String electionJson = getJsonString("src/main/resources/config/election.json");
         String officeJson = getJsonString("src/main/resources/config/election_offices.json");
         String itemJson = getJsonString("src/main/resources/config/election_items.json");
