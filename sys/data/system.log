@@ -1,0 +1,36 @@
+2023-46-01 15:46:38.461 ${sys:env} [main] INFO  org.teamfour.Main - Built path = base/additional/file.json
+2023-47-01 15:47:43.322 ${sys:env} [main] INFO  org.teamfour.Main - Built path = /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/file.json
+2023-53-01 15:53:36.285 ${sys:env} [main] INFO  org.teamfour.Main - false
+2023-53-01 15:53:36.289 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/cipher.json
+2023-53-01 15:53:36.289 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/system.log
+2023-53-01 15:53:36.289 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/meta.json
+2023-53-01 15:53:36.290 ${sys:env} [main] INFO  org.teamfour.Main - jdbc:sqlite//Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/store/
+2023-53-01 15:53:36.290 ${sys:env} [main] INFO  org.teamfour.Main - sys/store/
+2023-53-01 15:53:36.290 ${sys:env} [main] INFO  org.teamfour.Main - com/org/java
+2023-53-01 15:53:36.291 ${sys:env} [main] INFO  org.teamfour.Main - null
+2023-53-01 15:53:36.291 ${sys:env} [main] INFO  org.teamfour.Main - /
+2023-54-01 15:54:11.146 ${sys:env} [main] INFO  org.teamfour.Main - false
+2023-54-01 15:54:11.150 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/cipher.json
+2023-54-01 15:54:11.150 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/system.log
+2023-54-01 15:54:11.151 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/meta.json
+2023-54-01 15:54:11.151 ${sys:env} [main] INFO  org.teamfour.Main - jdbc:sqlite://Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/store/
+2023-54-01 15:54:11.151 ${sys:env} [main] INFO  org.teamfour.Main - sys/store/
+2023-54-01 15:54:11.151 ${sys:env} [main] INFO  org.teamfour.Main - com/org/java
+2023-54-01 15:54:11.151 ${sys:env} [main] INFO  org.teamfour.Main - null
+2023-54-01 15:54:11.152 ${sys:env} [main] INFO  org.teamfour.Main - /
+2023-42-01 16:42:01.667 ${sys:env} [main] INFO  org.teamfour.Main - false
+2023-42-01 16:42:01.672 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/cipher.json
+2023-42-01 16:42:01.673 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/system.log
+2023-42-01 16:42:01.673 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/meta.json
+2023-42-01 16:42:01.673 ${sys:env} [main] INFO  org.teamfour.Main - jdbc:sqlite://Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/store/
+2023-42-01 16:42:01.674 ${sys:env} [main] INFO  org.teamfour.Main - sys/store/
+2023-42-01 16:42:01.685 ${sys:env} [main] INFO  org.teamfour.Main - CipherData{encryptionAlgorithm='null', encryptionKey='null', tokenIssuer='null', tokenSecret='null'}
+2023-42-01 16:42:01.697 ${sys:env} [main] INFO  org.teamfour.Main - Metadata{version='1.0', electionId='null', status='postElection', voterAccessCode='null', autoTestComplete=false, manualTestComplete=false, tabulationComplete=false}
+2023-43-01 16:43:17.645 ${sys:env} [main] INFO  org.teamfour.Main - false
+2023-43-01 16:43:17.651 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/cipher.json
+2023-43-01 16:43:17.651 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/system.log
+2023-43-01 16:43:17.651 ${sys:env} [main] INFO  org.teamfour.Main - /Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/data/meta.json
+2023-43-01 16:43:17.652 ${sys:env} [main] INFO  org.teamfour.Main - jdbc:sqlite://Users/estefangonzales/IdeaProjects/T04-P2-CS460/sys/store/
+2023-43-01 16:43:17.652 ${sys:env} [main] INFO  org.teamfour.Main - sys/store/
+2023-43-01 16:43:17.663 ${sys:env} [main] INFO  org.teamfour.Main - CipherData{encryptionAlgorithm='AES', encryptionKey='546Q6T09HCM5KAEC2RLLBD4SYUVQ9OQ2', tokenIssuer='auth0', tokenSecret='FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4'}
+2023-43-01 16:43:17.677 ${sys:env} [main] INFO  org.teamfour.Main - Metadata{version='1.0', electionId='null', status='postElection', voterAccessCode='null', autoTestComplete=false, manualTestComplete=false, tabulationComplete=false}

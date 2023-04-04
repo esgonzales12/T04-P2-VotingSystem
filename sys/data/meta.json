@@ -1,0 +1,10 @@
+{
+  "serialNo": "T4VS001",
+  "version": "1.0",
+  "electionId": null,
+  "status": "postElection",
+  "voterAccessCode": null,
+  "autoTestComplete": false,
+  "manualTestComplete": false,
+  "tabulationComplete": false
+}
