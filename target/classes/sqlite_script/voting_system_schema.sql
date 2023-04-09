@@ -1,4 +1,4 @@
-CREATE TABLE election (
+CREATE TABLE ballot (
     id INTEGER PRIMARY KEY,
     location TEXT,
     date TEXT,

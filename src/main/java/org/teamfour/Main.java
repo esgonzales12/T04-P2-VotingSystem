@@ -1,44 +1,43 @@
 package org.teamfour;
 
 import com.google.gson.Gson;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.teamfour.model.Election;
-import org.teamfour.model.ElectionItem;
-import org.teamfour.model.ElectionOffice;
-import org.teamfour.system.SystemFiles;
-import org.teamfour.system.data.CipherData;
-import org.teamfour.system.data.Metadata;
-import org.teamfour.util.JsonUtil;
+import com.google.gson.GsonBuilder;
+import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
+import org.teamfour.model.bsl.Ballot;
+import org.teamfour.model.bsl.BallotItem;
+import org.teamfour.model.bsl.subitem.Approval;
+import org.teamfour.model.bsl.subitem.Contest;
+import org.teamfour.model.bsl.subitem.Proposition;
+import org.teamfour.model.bsl.subitem.Ranked;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.nio.file.Paths;
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        String electionJson = getJsonString("src/main/resources/config/election.json");
-        String officeJson = getJsonString("src/main/resources/config/election_offices.json");
-        String itemJson = getJsonString("src/main/resources/config/election_items.json");
-        Election election = new Gson().fromJson(electionJson, Election.class);
 
-        ElectionOffice [] offices = new Gson().fromJson(officeJson, ElectionOffice[].class);
-        ElectionItem [] items = new Gson().fromJson(itemJson, ElectionItem[].class);
+        RuntimeTypeAdapterFactory<BallotItem> typeAdapterFactory = RuntimeTypeAdapterFactory
+                        .of(BallotItem.class, "type")
+                        .registerSubtype(Contest.class, "contest")
+                        .registerSubtype(Ranked.class, "ranked")
+                        .registerSubtype(Approval.class, "approval")
+                        .registerSubtype(Proposition.class, "proposition");
 
-        Logger log = LogManager.getLogger();
-        File f = new File("alt.json");
-        log.info(f.exists());
-        log.info(SystemFiles.CIPHER);
-        log.info(SystemFiles.LOG);
-        log.info(SystemFiles.META);
-        log.info(SystemFiles.SQL_STORE_PATH);
-        log.info(SystemFiles.STORE_PATH);
-        CipherData cipherData = JsonUtil.getJsonObj(CipherData.class, SystemFiles.CIPHER);
-        Metadata metadata = JsonUtil.getJsonObj(Metadata.class, SystemFiles.META);
-        log.info(cipherData.toString());
-        log.info(metadata.toString());
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapterFactory(typeAdapterFactory)
+                .setPrettyPrinting()
+                .create();
+
+        String path = "src/main/resources/sample/ballot.json";
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            Ballot ballot = gson.fromJson(br, Ballot.class);
+            System.out.println(ballot.toString());
+            System.out.println(gson.toJson(ballot));
+        }  catch (IOException ignored) {}
+
     }
 
     public static void querySqlite() {

@@ -1,0 +1,46 @@
+{
+  "location": "123 Main St.",
+  "date": "2023-11-05",
+  "name": "General Election",
+  "instructions": "Please select one candidate per contest",
+  "sections": [
+    {
+      "name": "Statewide Candidates",
+      "items": [
+        {
+          "type": "contest",
+          "name": "Governor",
+          "description": "Vote for your preferred candidate for governor",
+          "allowedSelections": 1,
+          "candidates": [
+            {"name": "Jane Doe", "party": "Democratic"},
+            {"name": "John Smith", "party": "Republican"}
+          ]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition 123",
+          "description": "A proposition about something important",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        }
+      ]
+    },
+    {
+      "name": "Local Candidates",
+      "items": [
+        {
+          "type": "contest",
+          "name": "Mayor",
+          "description": "Vote for your preferred candidate for mayor",
+          "allowedSelections": 1,
+          "candidates": [
+            {"name": "Bob Johnson", "party": "Independent"},
+            {"name": "Sally Lee", "party": "Democratic"},
+            {"name": "Mike Smith", "party": "Republican"}
+          ]
+        }
+      ]
+    }
+  ]
+}
