@@ -1,5 +1,4 @@
 package org.teamfour.dao;
 
-public class ElectionDao {
-
+public class OptionDao {
 }

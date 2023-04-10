@@ -1,8 +1,6 @@
 CREATE TABLE ballot (
     id INTEGER PRIMARY KEY,
     ballotHash TEXT,
-    name TEXT,
-    instructions text,
     location TEXT,
     date TEXT
 );
