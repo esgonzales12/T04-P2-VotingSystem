@@ -1,4 +1,4 @@
-package org.teamfour.system;
+package org.teamfour.system.enums;
 
 public enum Authority {
     POLLING_OFFICIAL,

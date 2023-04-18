@@ -5,3 +5,5 @@ mysql
 testfiles
 /.idea/
 .DS_STORE
+target
+/target/

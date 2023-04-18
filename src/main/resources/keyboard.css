@@ -1,0 +1,102 @@
+
+.h-key {
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-cursor: default;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-background-insets: 0, 0, -1, 0;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-font-size: 20px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;}
+.h-key:hover, .h-key:focused, .h-key.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333; }
+.h-key:pressed, .h-key.pressed {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.125), 5, 0, 0, 3); }
+.h-key.disabled, .h-key[disabled], fieldset[disabled] .h-key {
+    -fx-cursor: wait;
+    -fx-opacity: 0.65; }
+
+.key {
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+    -fx-cursor: default;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-background-insets: 0, 0, -1, 0;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;}
+.key:hover, .key:focused, .key.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333; }
+.key:pressed, .key.pressed {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.125), 5, 0, 0, 3); }
+.key.disabled, .key[disabled], fieldset[disabled] .key {
+    -fx-cursor: wait;
+    -fx-opacity: 0.65; }
+
+.key-default {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc; }
+.key-default:focused, .key-default.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #8c8c8c; }
+.key-default:hover {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #adadad; }
+.key-default:pressed, .key-default.pressed, .open > .key-default.dropdown-toggle {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #adadad; }
+.key-default:pressed:hover, .key-default:pressed:focused, .key-default:pressed.focused, .key-default.pressed:hover, .key-default.pressed:focused, .key-default.pressed.focused, .open > .key-default.dropdown-toggle:hover, .open > .key-default.dropdown-toggle:focused, .open > .key-default.dropdown-toggle.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #d4d4d4;
+    -fx-border-color: #8c8c8c; }
+.key-default:selected, .key-default.selected {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #adadad; }
+.key-default:selected:hover, .key-default:selected:focused, .key-default:selected.focused, .key-default.selected:hover, .key-default.selected:focused, .key-default.selected.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #d4d4d4;
+    -fx-border-color: #8c8c8c; }
+.key-default:pressed, .key-default.pressed, .open > .key-default.dropdown-toggle {
+    background-image: none; }
+.key-default.disabled, .key-default.disabled:hover, .key-default.disabled:focused, .key-default.disabled.focused, .key-default.disabled:pressed, .key-default.disabled.pressed, .key-default[disabled], .key-default[disabled]:hover, .key-default[disabled]:focused, .key-default[disabled].focused, .key-default[disabled]:pressed, .key-default[disabled].pressed, fieldset[disabled] .key-default, fieldset[disabled] .key-default:hover, fieldset[disabled] .key-default:focused, fieldset[disabled] .key-default.focused, fieldset[disabled] .key-default:pressed, fieldset[disabled] .key-default.pressed {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc; }
+.key-default .badge {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #333; }
+
+
+.txt-field {
+    -fx-padding: 15px;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px; }
+
+.txt-field:focused, .txt-field.focused {
+    -fx-border-color: #386298;
+    -fx-text-fill: #333;
+    -fx-fill: #333;
+    -fx-background-color: #e6e6e6; }
