@@ -2,13 +2,8 @@ package org.teamfour;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
+import org.teamfour.dao.VotingDao;
 import org.teamfour.model.bsl.Ballot;
-import org.teamfour.model.bsl.BallotItem;
-import org.teamfour.model.bsl.subitem.Approval;
-import org.teamfour.model.bsl.subitem.Contest;
-import org.teamfour.model.bsl.subitem.Proposition;
-import org.teamfour.model.bsl.subitem.Ranked;
 
 import java.io.*;
 import java.nio.file.Paths;
@@ -19,23 +14,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RuntimeTypeAdapterFactory<BallotItem> typeAdapterFactory = RuntimeTypeAdapterFactory
-                        .of(BallotItem.class, "type")
-                        .registerSubtype(Contest.class, "contest")
-                        .registerSubtype(Ranked.class, "ranked")
-                        .registerSubtype(Approval.class, "approval")
-                        .registerSubtype(Proposition.class, "proposition");
-
         Gson gson = new GsonBuilder()
-                .registerTypeAdapterFactory(typeAdapterFactory)
                 .setPrettyPrinting()
                 .create();
 
         String path = "src/main/resources/sample/ballot.json";
+        VotingDao votingDao = new VotingDao();
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             Ballot ballot = gson.fromJson(br, Ballot.class);
-            System.out.println(ballot.toString());
-            System.out.println(gson.toJson(ballot));
+            votingDao.saveBallot(ballot);
+            System.out.println(ballot);
         }  catch (IOException ignored) {}
 
     }

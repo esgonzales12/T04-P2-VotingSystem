@@ -1,45 +1,42 @@
 CREATE TABLE ballot (
     id INTEGER PRIMARY KEY,
-    ballotHash TEXT,
+    hash TEXT,
+    name TEXT,
+    instructions text,
     location TEXT,
     date TEXT
 );
 
-CREATE TABLE ballotSection(
+CREATE TABLE section
+(
     id INTEGER PRIMARY KEY,
     ballotId INTEGER,
     name TEXT
 );
 
-CREATE TABLE ballotItem (
+CREATE TABLE item (
     id INTEGER PRIMARY KEY,
-    ballotId INTEGER,
-    ballotSectionId INTEGER,
+    sectionId INTEGER,
     description TEXT,
     type TEXT,
     name TEXT,
     allowedSelections INTEGER
 );
 
-CREATE TABLE itemCandidate (
+CREATE TABLE option (
     id INTEGER PRIMARY KEY,
     itemId INTEGER,
     name TEXT,
-    party TEXT
+    party TEXT,
+    choice TEXT
 );
 
-CREATE TABLE itemOption (
-    id INTEGER PRIMARY KEY,
-    itemId INTEGER,
-    option TEXT
-);
 
 CREATE TABLE vote (
     id INTEGER PRIMARY KEY,
-    ballotId INTEGER,
-    ballotSectionId INTEGER,
     itemId INTEGER,
     selectionId INTEGER,
+    value TEXT,
     date TEXT,
     finalized BOOLEAN NOT NULL CHECK (finalized IN (0, 1))
 );

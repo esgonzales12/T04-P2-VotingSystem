@@ -1,16 +1,23 @@
 package org.teamfour.model.bsl;
 
-public class BallotItem {
-    protected transient final String type;
-    protected final String name;
-    protected final String description;
-    protected final Integer allowedSelections;
+import java.util.List;
 
-    public BallotItem(Integer allowedSelections, String name, String type, String description) {
+public class BallotItem {
+    private final String type;
+    private final String name;
+    private final String description;
+    private final Integer allowedSelections;
+    private final List<Candidate> candidates;
+    private final List<String> options;
+
+
+    public BallotItem(Integer allowedSelections, String name, String type, String description, List<Candidate> candidates, List<String> options) {
         this.allowedSelections = allowedSelections;
         this.name = name;
         this.type = type;
         this.description = description;
+        this.candidates = candidates;
+        this.options = options;
     }
 
     public String getName() {
@@ -27,5 +34,25 @@ public class BallotItem {
 
     public Integer getAllowedSelections() {
         return allowedSelections;
+    }
+
+    public List<Candidate> getCandidates() {
+        return candidates;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    @Override
+    public String toString() {
+        return "BallotItem{" +
+                "type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", allowedSelections=" + allowedSelections +
+                ", candidates=" + candidates +
+                ", options=" + options +
+                '}';
     }
 }

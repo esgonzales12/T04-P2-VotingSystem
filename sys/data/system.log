@@ -34,3 +34,189 @@
 2023-43-01 16:43:17.652 ${sys:env} [main] INFO  org.teamfour.Main - sys/store/
 2023-43-01 16:43:17.663 ${sys:env} [main] INFO  org.teamfour.Main - CipherData{encryptionAlgorithm='AES', encryptionKey='546Q6T09HCM5KAEC2RLLBD4SYUVQ9OQ2', tokenIssuer='auth0', tokenSecret='FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4'}
 2023-43-01 16:43:17.677 ${sys:env} [main] INFO  org.teamfour.Main - Metadata{version='1.0', electionId='null', status='postElection', voterAccessCode='null', autoTestComplete=false, manualTestComplete=false, tabulationComplete=false}
+2023-37-28 08:37:15.568 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-26-28 09:26:05.448 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-26-28 09:26:05.471 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-30-28 09:30:16.242 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-30-28 09:30:16.328 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-30-28 09:30:16.336 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-30-28 09:30:16.341 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.652 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.677 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.681 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.683 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.685 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-34-28 09:34:19.688 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.781 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.803 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.807 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.809 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.812 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.814 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.817 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.819 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.819 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "Doe": syntax error)
+2023-58-28 09:58:40.820 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.821 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.821 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "Smith": syntax error)
+2023-58-28 09:58:40.822 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.825 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.826 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.827 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.827 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such column: Yes)
+2023-58-28 09:58:40.828 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.829 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.829 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such column: No)
+2023-58-28 09:58:40.830 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.832 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.834 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.837 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.838 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.839 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.839 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "Johnson": syntax error)
+2023-58-28 09:58:40.840 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.840 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.840 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "Lee": syntax error)
+2023-58-28 09:58:40.841 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-58-28 09:58:40.842 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-58-28 09:58:40.842 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "Smith": syntax error)
+2023-02-28 10:02:30.558 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.582 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.587 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.591 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.594 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.603 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.606 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.609 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-02-28 10:02:30.609 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Democratic'": syntax error)
+2023-02-28 10:02:30.612 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.615 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-02-28 10:02:30.615 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Republican'": syntax error)
+2023-02-28 10:02:30.616 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.619 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.621 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.624 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.625 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-02-28 10:02:30.626 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.628 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.629 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-02-28 10:02:30.630 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.633 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.634 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.637 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.638 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.639 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-02-28 10:02:30.639 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Independent'": syntax error)
+2023-02-28 10:02:30.640 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.642 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-02-28 10:02:30.642 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Democratic'": syntax error)
+2023-02-28 10:02:30.643 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-02-28 10:02:30.643 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-02-28 10:02:30.644 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Republican'": syntax error)
+2023-03-28 10:03:28.839 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.874 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.878 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.880 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.882 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.886 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.888 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('4', 'Jane Doe' 'Democratic')
+2023-03-28 10:03:28.890 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.894 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-03-28 10:03:28.895 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Democratic'": syntax error)
+2023-03-28 10:03:28.896 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('4', 'John Smith' 'Republican')
+2023-03-28 10:03:28.897 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.898 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-03-28 10:03:28.898 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Republican'": syntax error)
+2023-03-28 10:03:28.899 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.902 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.903 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.907 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.908 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-03-28 10:03:28.909 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.911 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.912 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-03-28 10:03:28.914 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.916 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.917 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.920 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.922 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Bob Johnson' 'Independent')
+2023-03-28 10:03:28.923 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.923 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-03-28 10:03:28.924 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Independent'": syntax error)
+2023-03-28 10:03:28.924 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Sally Lee' 'Democratic')
+2023-03-28 10:03:28.925 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.925 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-03-28 10:03:28.926 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Democratic'": syntax error)
+2023-03-28 10:03:28.927 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Mike Smith' 'Republican')
+2023-03-28 10:03:28.928 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-03-28 10:03:28.928 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-03-28 10:03:28.928 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (near "'Republican'": syntax error)
+2023-04-28 10:04:22.603 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.627 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.631 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.633 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.635 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.639 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.640 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'Jane Doe', 'Democratic')
+2023-04-28 10:04:22.642 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.645 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.647 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.647 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'John Smith', 'Republican')
+2023-04-28 10:04:22.648 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.650 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.651 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.652 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.654 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.655 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.658 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.659 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.659 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.661 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.662 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.663 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.665 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.666 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.668 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.669 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Bob Johnson', 'Independent')
+2023-04-28 10:04:22.670 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.672 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.673 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.673 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Sally Lee', 'Democratic')
+2023-04-28 10:04:22.674 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.676 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.677 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-04-28 10:04:22.678 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Mike Smith', 'Republican')
+2023-04-28 10:04:22.678 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.681 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-04-28 10:04:22.683 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'part'
+2023-06-28 10:06:08.593 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.617 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.621 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.624 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.627 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.632 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.635 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'Jane Doe', 'Democratic')
+2023-06-28 10:06:08.636 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.639 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.640 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'John Smith', 'Republican')
+2023-06-28 10:06:08.640 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.642 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.644 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.646 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.647 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.649 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.650 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.652 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.653 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.655 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.657 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.659 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.660 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Bob Johnson', 'Independent')
+2023-06-28 10:06:08.660 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.662 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.663 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Sally Lee', 'Democratic')
+2023-06-28 10:06:08.664 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.666 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.667 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Mike Smith', 'Republican')
+2023-06-28 10:06:08.667 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-06-28 10:06:08.669 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
