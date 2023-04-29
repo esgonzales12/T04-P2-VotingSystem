@@ -1,15 +1,22 @@
-package org.teamfour.display.components.ballot;
+package org.teamfour.display.components.voting;
 
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
-import org.teamfour.display.components.ballot.base.BaseItemDisplay;
+import org.teamfour.display.components.voting.base.BaseItemDisplay;
+import org.teamfour.display.components.voting.common.BallotUtils;
 import org.teamfour.model.db.Item;
 import org.teamfour.model.db.Option;
+import org.teamfour.model.db.Vote;
 import org.teamfour.model.enums.ItemType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemDisplay extends BaseItemDisplay {
 
@@ -23,12 +30,20 @@ public class ItemDisplay extends BaseItemDisplay {
         init(item);
     }
 
+    public List<Vote> getVotes() {
+        List<Vote> votes = new ArrayList<>();
+        for (CandidateCard option : candidateCards) {
+            Vote vote = option.toVote();
+            vote.setItemId(this.itemId);
+            votes.add(vote);
+        }
+        return votes;
+    }
+
     private void init(Item ballotItem) {
         boolean proposition = ballotItem.getType().equals(ItemType.PROPOSITION.value());
-        for (Option option: ballotItem.getOptions()) {
-            String primaryText = proposition ? option.getChoice() : option.getName();
-            String secondaryText = proposition ? "" : option.getParty();
-            CandidateCard optionCard = new CandidateCard(primaryText, secondaryText, option.getId());
+        for (Option option : ballotItem.getOptions()) {
+            CandidateCard optionCard = BallotUtils.getCandidateCard(option, proposition);
             optionCard.setOnMouseClicked(selectHandler(optionCard));
             candidateCards.add(optionCard);
         }

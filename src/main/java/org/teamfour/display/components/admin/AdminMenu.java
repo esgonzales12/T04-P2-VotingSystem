@@ -10,7 +10,6 @@ import javafx.scene.text.Text;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.teamfour.display.components.InfoPopup;
-import org.teamfour.display.components.admin.AdminMenuComponent;
 import org.teamfour.display.manager.DisplayManager;
 import org.teamfour.display.util.ColorProvider;
 import org.teamfour.display.util.OperationDescription;
@@ -36,7 +35,7 @@ public class AdminMenu extends StackPane {
         HBox container = new HBox();
         container.setAlignment(Pos.CENTER);
 
-        for (Operation operation: operations) {
+        for (Operation operation : operations) {
             AdminMenuComponent component = AdminMenuComponent.Factory.buildComponent(operation);
             component.operationButton.setOnMouseClicked(click -> {
                 displayManager.dispatchOperation(operation);

@@ -1,10 +1,10 @@
-package org.teamfour.display.components.ballot;
+package org.teamfour.display.components.voting;
 
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import org.apache.commons.lang3.StringUtils;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
-import org.teamfour.display.components.ballot.base.OptionCard;
+import org.teamfour.display.components.voting.base.OptionCard;
 import org.teamfour.display.util.Icons;
 import org.teamfour.model.db.Vote;
 
@@ -17,7 +17,7 @@ public class CandidateCard extends OptionCard {
     }
 
     @Override
-    public void select(){
+    public void select() {
         this.selected = true;
         this.graphicPane.getChildren().clear();
         this.graphicPane
@@ -26,13 +26,15 @@ public class CandidateCard extends OptionCard {
     }
 
     @Override
-    public void select(String content){}
+    public void select(String content) {
+    }
 
     @Override
-    public void deselect(){
+    public void deselect() {
         this.selected = false;
         this.graphicPane.getChildren().clear();
     }
+
     @Override
     public Vote toVote() {
         Vote vote = new Vote();

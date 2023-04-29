@@ -9,8 +9,8 @@ import org.teamfour.display.KeyPressListener;
 public class QwertyKeyboard extends VBox {
     private static final double KEY_SIZE = 50;
     private static final double KEY_GAP = 5;
-    private static final String [] ROW_KEYS = { "QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM" };
-    private final HBox [] rows;
+    private static final String[] ROW_KEYS = {"QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"};
+    private final HBox[] rows;
     private KeyPressListener listener;
 
     public QwertyKeyboard() {

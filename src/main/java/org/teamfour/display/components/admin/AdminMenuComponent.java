@@ -41,9 +41,12 @@ public class AdminMenuComponent extends HBox {
             info.setStrokeWidth(1.5);
 
             switch (operation) {
-                case INITIATE_VOTING -> operationButton.setText("Initiate Voting Window");
-                case VOTER_RESET -> operationButton.setText("Reset Voter Progress");
-                case BALLOT_CONFIGURATION -> operationButton.setText("Initiate Ballot Configuration");
+                case INITIATE_VOTING ->
+                        operationButton.setText("Initiate Voting Window");
+                case VOTER_RESET ->
+                        operationButton.setText("Reset Voter Progress");
+                case BALLOT_CONFIGURATION ->
+                        operationButton.setText("Initiate Ballot Configuration");
             }
             component.getChildren().addAll(info, operationButton);
             return component;

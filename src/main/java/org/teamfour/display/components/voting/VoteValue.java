@@ -1,4 +1,4 @@
-package org.teamfour.display.components.ballot;
+package org.teamfour.display.components.voting;
 
 public class VoteValue {
     public static final String NONE = "NONE";

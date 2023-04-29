@@ -33,6 +33,7 @@ public class Icons {
 
     public static class Builder {
         private final FontIcon fontIcon;
+
         public Builder(FontAwesome fontAwesome) {
             fontIcon = new FontIcon(fontAwesome);
         }

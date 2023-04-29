@@ -1,4 +1,4 @@
-package org.teamfour.display.resolver.data;
+package org.teamfour.display.data;
 
 import org.teamfour.display.enums.ResponseType;
 

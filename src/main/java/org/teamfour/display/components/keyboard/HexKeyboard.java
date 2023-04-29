@@ -16,8 +16,9 @@ public class HexKeyboard extends VBox {
 
     private static final double KEY_SIZE = 50;
     private static final double KEY_SPACING = 2.5;
-    private final HBox [] rows;
+    private final HBox[] rows;
     private KeyPressListener listener;
+
     public HexKeyboard() {
         rows = new HBox[6];
         init();

@@ -1,4 +1,4 @@
-package org.teamfour.display.components.ballot.base;
+package org.teamfour.display.components.voting.base;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
@@ -28,10 +28,24 @@ public abstract class OptionCard extends HBox {
         this.getChildren().addAll(graphicPane, textFlow);
         this.setMaxWidth(300);
         this.setMinWidth(300);
+        this.setMaxHeight(50);
+
     }
-    public void select(){}
-    public void select(String content){}
-    public void deselect(){}
-    public boolean isSelected() { return selected; }
-    public Vote toVote() { return null; }
+
+    public void select() {
+    }
+
+    public void select(String content) {
+    }
+
+    public void deselect() {
+    }
+
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public Vote toVote() {
+        return null;
+    }
 }

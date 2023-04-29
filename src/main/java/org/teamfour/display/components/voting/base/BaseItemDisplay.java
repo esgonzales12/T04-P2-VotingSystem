@@ -1,13 +1,12 @@
-package org.teamfour.display.components.ballot.base;
+package org.teamfour.display.components.voting.base;
 
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import org.teamfour.display.components.ballot.CandidateCard;
+import org.teamfour.display.components.voting.CandidateCard;
 import org.teamfour.model.db.Item;
-import org.teamfour.model.db.Vote;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,15 +24,6 @@ public abstract class BaseItemDisplay extends BorderPane {
         this.allowedSelections = item.getAllowedSelections();
         setHeaderLabel(item, sectionName);
         setTop(headerLabel);
-    }
-
-    public List<Vote> getVotes() {
-        List<Vote> votes = new ArrayList<>();
-        for (CandidateCard option: candidateCards) {
-            Vote vote = option.toVote();
-            vote.setItemId(this.itemId);
-        }
-        return votes;
     }
 
     private void setHeaderLabel(Item item, String sectionName) {
