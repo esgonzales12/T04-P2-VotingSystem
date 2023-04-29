@@ -23,21 +23,7 @@ public abstract class BaseItemDisplay extends BorderPane {
         this.candidateCards = new ArrayList<>();
         this.itemId = item.getId();
         this.allowedSelections = item.getAllowedSelections();
-
-        Text itemHeader = new Text("Item: " + item.getName() + "\n");
-        Text sectionHeader = new Text("Section: " + sectionName + "\n");
-        Text selectionHeader = new Text(String.format("You can make up to %d selection(s)", allowedSelections));
-        itemHeader.setFill(Color.WHITE);
-        sectionHeader.setFill(Color.WHITE);
-        selectionHeader.setFill(Color.WHITE);
-
-        itemHeader.getStyleClass().setAll("h3", "strong");
-        sectionHeader.getStyleClass().setAll("h4", "strong");
-        selectionHeader.getStyleClass().setAll("p", "strong");
-        TextFlow textFlow = new TextFlow(itemHeader, sectionHeader, selectionHeader);
-
-        headerLabel.getStyleClass().setAll("item-header");
-        headerLabel.getChildren().add(textFlow);
+        setHeaderLabel(item, sectionName);
         setTop(headerLabel);
     }
 
@@ -48,6 +34,28 @@ public abstract class BaseItemDisplay extends BorderPane {
             vote.setItemId(this.itemId);
         }
         return votes;
+    }
+
+    private void setHeaderLabel(Item item, String sectionName) {
+        Text itemHeader = new Text("Item: " + item.getName() + "\n");
+        Text sectionHeader = new Text("Section: " + sectionName + "\n");
+        Text descriptionHeader = new Text(item.getDescription() + "\n");
+        Text selectionHeader = new Text(String.format("You can make up to %d selection(s)", allowedSelections));
+
+        itemHeader.setFill(Color.WHITE);
+        sectionHeader.setFill(Color.WHITE);
+        selectionHeader.setFill(Color.WHITE);
+        descriptionHeader.setFill(Color.WHITE);
+
+        itemHeader.getStyleClass().setAll("h3", "strong");
+        sectionHeader.getStyleClass().setAll("h4", "strong");
+        selectionHeader.getStyleClass().setAll("p", "em", "strong");
+        descriptionHeader.getStyleClass().setAll("h5", "strong");
+
+        TextFlow textFlow = new TextFlow(itemHeader, sectionHeader, descriptionHeader, selectionHeader);
+
+        headerLabel.getStyleClass().setAll("item-header");
+        headerLabel.getChildren().add(textFlow);
     }
 
 }
