@@ -1,4 +1,4 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.keyboard;
 
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;

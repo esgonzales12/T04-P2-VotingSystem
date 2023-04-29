@@ -22,9 +22,6 @@ public abstract class DaoBase extends StaticLogBase {
         try {
             Class.forName("org.sqlite.JDBC");
             Connection conn =  DriverManager.getConnection(SystemFiles.SQL_STORE_PATH + "votingData.db");
-            if (conn != null) {
-                log.info("SUCCESSFULLY CONNECTED TO votingData.db");
-            }
             return conn;
         } catch (SQLException e) {
             log.error("UNABLE TO OPEN CONNECTION");
@@ -205,6 +202,7 @@ public abstract class DaoBase extends StaticLogBase {
             }
             return Optional.empty();
         } catch (SQLException e) {
+            log.error("EXCEPTION ON SELECT ONE");
             log.error(e.getMessage());
             return Optional.empty();
         } finally {

@@ -23,7 +23,7 @@ public class VotingDao extends DaoBase {
     private static final String VOTE = "vote";
 
 
-    public void saveBallot(org.teamfour.model.bsl.Ballot ballot) {
+    public Ballot saveBallot(org.teamfour.model.bsl.Ballot ballot) {
         String ballotValues = String.format("('%s', '%s', '%s', '%s')",
                 ballot.getName(), ballot.getInstructions(), ballot.getLocation(), ballot.getDate());
         Ballot dbBallot = create(Ballot.class, new QueryBuilder()
@@ -58,6 +58,8 @@ public class VotingDao extends DaoBase {
             }
         }
 
+        return dbBallot;
+
     }
 
     private void saveItemOptions(Item item, BallotItem ballotItem) {
@@ -79,7 +81,6 @@ public class VotingDao extends DaoBase {
 
         for (Candidate candidate: ballotItem.getCandidates()) {
             String optionValues = String.format("('%d', '%s', '%s')", item.getId(), candidate.getName(), candidate.getParty());
-            log.info("Option values are: " + optionValues);
 
             Option option = create(Option.class,
                     new QueryBuilder()

@@ -1,4 +1,4 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.admin;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -9,6 +9,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import org.teamfour.display.Form;
 import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.components.keyboard.HexKeyboard;
 import org.teamfour.display.resolver.data.ResolutionRequest;
 import org.teamfour.display.resolver.Resolver;
 import org.teamfour.display.util.ColorProvider;

@@ -220,3 +220,199 @@
 2023-06-28 10:06:08.667 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Mike Smith', 'Republican')
 2023-06-28 10:06:08.667 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
 2023-06-28 10:06:08.669 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.928 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.950 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.953 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.955 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.957 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.960 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.962 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'Jane Doe', 'Democratic')
+2023-40-28 15:40:12.963 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.967 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.968 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.968 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('1', 'John Smith', 'Republican')
+2023-40-28 15:40:12.969 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.972 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.973 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.973 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.975 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.977 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.979 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.979 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.980 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.983 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.983 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.984 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.987 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.989 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.991 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.992 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Bob Johnson', 'Independent')
+2023-40-28 15:40:12.992 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.994 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.995 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.995 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Sally Lee', 'Democratic')
+2023-40-28 15:40:12.996 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.998 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:12.999 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:12.999 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('3', 'Mike Smith', 'Republican')
+2023-40-28 15:40:13.000 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:13.003 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:13.003 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.807 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.841 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.845 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.847 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.849 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.852 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.853 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('4', 'Jane Doe', 'Democratic')
+2023-40-28 15:40:55.854 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.857 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.858 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.858 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('4', 'John Smith', 'Republican')
+2023-40-28 15:40:55.859 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.861 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.861 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.862 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.864 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.865 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.867 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.868 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.868 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.870 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.871 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.872 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.874 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.875 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.877 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.878 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Bob Johnson', 'Independent')
+2023-40-28 15:40:55.879 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.881 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.882 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.882 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Sally Lee', 'Democratic')
+2023-40-28 15:40:55.882 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.884 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.885 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-40-28 15:40:55.886 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - Option values are: ('6', 'Mike Smith', 'Republican')
+2023-40-28 15:40:55.886 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.889 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.logging.StaticLogBase - SUCCESSFULLY CONNECTED TO votingData.db
+2023-40-28 15:40:55.889 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.130 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.142 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.149 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.153 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.163 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.165 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-45-28 15:45:41.169 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.842 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.848 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.855 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.859 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.872 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.876 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-51-28 15:51:12.883 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.712 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.716 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.720 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.720 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.726 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.727 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.732 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.733 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.744 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.744 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.747 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.747 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-52-28 15:52:55.751 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-52-28 15:52:55.752 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.594 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM ballot
+WHERE ballot.id = '6';
+
+2023-56-28 15:56:54.606 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM section
+WHERE section.id = '11';
+
+2023-56-28 15:56:54.611 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '16';
+
+2023-56-28 15:56:54.617 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '36';
+
+2023-56-28 15:56:54.619 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.620 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.622 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '37';
+
+2023-56-28 15:56:54.624 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.626 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.628 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '17';
+
+2023-56-28 15:56:54.631 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '38';
+
+2023-56-28 15:56:54.633 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.633 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.635 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '39';
+
+2023-56-28 15:56:54.637 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.637 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.639 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM section
+WHERE section.id = '12';
+
+2023-56-28 15:56:54.642 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '18';
+
+2023-56-28 15:56:54.645 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '40';
+
+2023-56-28 15:56:54.647 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.648 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.650 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '41';
+
+2023-56-28 15:56:54.651 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.651 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-56-28 15:56:54.653 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '42';
+
+2023-56-28 15:56:54.655 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - EXCEPTION ON SELECT ONE
+2023-56-28 15:56:54.656 ${sys:env} [main] ERROR org.teamfour.logging.StaticLogBase - no such column: 'type'
+2023-58-28 15:58:10.748 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM ballot
+WHERE ballot.id = '7';
+
+2023-58-28 15:58:10.760 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM section
+WHERE section.id = '13';
+
+2023-58-28 15:58:10.766 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '19';
+
+2023-58-28 15:58:10.774 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '43';
+
+2023-58-28 15:58:10.779 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '44';
+
+2023-58-28 15:58:10.783 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '20';
+
+2023-58-28 15:58:10.786 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '45';
+
+2023-58-28 15:58:10.789 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '46';
+
+2023-58-28 15:58:10.793 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM section
+WHERE section.id = '14';
+
+2023-58-28 15:58:10.796 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM item
+WHERE item.id = '21';
+
+2023-58-28 15:58:10.799 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '47';
+
+2023-58-28 15:58:10.803 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '48';
+
+2023-58-28 15:58:10.806 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
+WHERE option.id = '49';
+

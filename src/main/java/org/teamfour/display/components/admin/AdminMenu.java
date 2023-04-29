@@ -1,9 +1,7 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.admin;
 
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -11,6 +9,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
+import org.teamfour.display.components.InfoPopup;
+import org.teamfour.display.components.admin.AdminMenuComponent;
 import org.teamfour.display.manager.DisplayManager;
 import org.teamfour.display.util.ColorProvider;
 import org.teamfour.display.util.OperationDescription;

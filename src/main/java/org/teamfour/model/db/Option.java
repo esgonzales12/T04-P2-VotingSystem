@@ -14,9 +14,6 @@ public class Option {
     @Column(name = "itemId")
     private Integer itemId;
 
-    @Column(name = "type")
-    private String type;
-
     @Column(name = "name")
     private String name;
 
@@ -26,10 +23,9 @@ public class Option {
     @Column(name = "choice")
     private String choice;
 
-    public Option(Integer id, Integer itemId, String type, String firstname, String party, String option) {
+    public Option(Integer id, Integer itemId, String firstname, String party, String option) {
         this.id = id;
         this.itemId = itemId;
-        this.type = type;
         this.name = firstname;
         this.party = party;
         this.choice = option;
@@ -70,7 +66,4 @@ public class Option {
                 '}';
     }
 
-    public String getType() {
-        return type;
-    }
 }

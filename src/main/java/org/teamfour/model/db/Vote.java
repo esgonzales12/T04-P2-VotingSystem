@@ -59,4 +59,40 @@ public class Vote {
     public Integer getFinalized() {
         return finalized;
     }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setItemId(Integer itemId) {
+        this.itemId = itemId;
+    }
+
+    public void setOptionId(Integer optionId) {
+        this.optionId = optionId;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setFinalized(Integer finalized) {
+        this.finalized = finalized;
+    }
+
+    @Override
+    public String toString() {
+        return "Vote{" +
+                "id=" + id +
+                ", itemId=" + itemId +
+                ", optionId=" + optionId +
+                ", value='" + value + '\'' +
+                ", date='" + date + '\'' +
+                ", finalized=" + finalized +
+                '}';
+    }
 }

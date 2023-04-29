@@ -92,4 +92,18 @@ public class Item {
     public void setAllowedSelections(Integer allowedSelections) {
         this.allowedSelections = allowedSelections;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", sectionId=" + sectionId +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", allowedSelections=" + allowedSelections +
+                ", options=" + options +
+                ", candidates=" + candidates +
+                '}';
+    }
 }

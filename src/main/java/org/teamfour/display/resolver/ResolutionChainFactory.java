@@ -1,6 +1,6 @@
 package org.teamfour.display.resolver;
 
-import org.teamfour.display.components.AdminSignIn;
+import org.teamfour.display.components.admin.AdminSignIn;
 import org.teamfour.display.enums.ResolutionPolicy;
 import org.teamfour.display.enums.TransitionPolicy;
 import org.teamfour.display.manager.DisplayManager;
