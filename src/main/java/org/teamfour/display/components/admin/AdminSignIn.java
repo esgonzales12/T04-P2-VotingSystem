@@ -9,8 +9,6 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import org.teamfour.display.KeyPressListener;
 import org.teamfour.display.components.keyboard.HexKeyboard;
-import org.teamfour.display.data.ResolutionRequest;
-import org.teamfour.display.manager.DisplayManager;
 import org.teamfour.display.util.ColorProvider;
 import org.teamfour.display.util.KeyCodes;
 
@@ -18,11 +16,10 @@ import org.teamfour.display.util.KeyCodes;
 public class AdminSignIn extends VBox implements KeyPressListener {
 
     private static final double SIGN_IN_SPACING = 20;
-    private final PasswordField passwordField;
-    private final TextField usernameField;
-    private final Button formSubmit;
     private final HexKeyboard keypad;
-    private DisplayManager resolver;
+    public final Button formSubmit;
+    public final PasswordField passwordField;
+    public final TextField usernameField;
 
     public AdminSignIn() {
         passwordField = new PasswordField();
@@ -36,31 +33,14 @@ public class AdminSignIn extends VBox implements KeyPressListener {
 
         keypad.setListener(this);
         formSubmit.getStyleClass().setAll("btn", "btn-lg", "btn-default");
-        formSubmit.setOnMouseClicked(click -> {
-            if (resolver != null) {
-                resolver.resolve(new ResolutionRequest.Builder().build());
-            }
-        });
 
         passwordField.setFocusTraversable(false);
         passwordField.setPromptText("Enter Your Password");
-        passwordField.setTextFormatter(new TextFormatter<String>(KeyCodes.HEX_FILTER));
-        passwordField.maxWidthProperty().bind(this.widthProperty().multiply(0.25));
-        passwordField.setOnMouseClicked(event -> {
-            passwordField.setStyle(null);
-            passwordField.getStyleClass().clear();
-            passwordField.getStyleClass().setAll("text-field", "text-input");
-        });
+        initTextField(passwordField);
 
         usernameField.setFocusTraversable(false);
         usernameField.setPromptText("Enter Your Username");
-        usernameField.setTextFormatter(new TextFormatter<String>(KeyCodes.HEX_FILTER));
-        usernameField.maxWidthProperty().bind(this.widthProperty().multiply(0.25));
-        usernameField.setOnMouseClicked(event -> {
-            usernameField.setStyle(null);
-            usernameField.getStyleClass().clear();
-            usernameField.getStyleClass().setAll("text-field", "text-input");
-        });
+        initTextField(usernameField);
 
         setSpacing(SIGN_IN_SPACING);
         setAlignment(Pos.CENTER);
@@ -91,6 +71,12 @@ public class AdminSignIn extends VBox implements KeyPressListener {
     public void clear() {
         usernameField.clear();
         passwordField.clear();
+    }
+
+    private void initTextField(TextField textField) {
+        textField.setTextFormatter(new TextFormatter<String>(KeyCodes.HEX_FILTER));
+        textField.maxWidthProperty().bind(this.widthProperty().multiply(0.25));
+        textField.getStyleClass().setAll("alert", "strong");
     }
 
 }

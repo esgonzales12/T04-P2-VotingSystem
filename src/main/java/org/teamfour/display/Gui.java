@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import org.teamfour.dao.VotingDao;
 import org.teamfour.display.components.VoterLogin;
+import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
 import org.teamfour.display.components.voting.CandidateCard;
 import org.teamfour.display.enums.ResponseType;
@@ -39,10 +40,15 @@ public class Gui extends Application {
     };
 
     DisplayManager manager = new DisplayManager() {
+        boolean temp = false;
         @Override
         public ResolutionResponse resolve(ResolutionRequest request) {
             System.out.println(request.toString());
-            return new ResolutionResponse(ResponseType.SUCCESS);
+            temp = !temp;
+            if (temp) {
+                return new ResolutionResponse(ResponseType.SUCCESS);
+            }
+            return new ResolutionResponse(ResponseType.FAILURE);
         }
 
         @Override
@@ -68,7 +74,10 @@ public class Gui extends Application {
         StackPane root = new StackPane();
         VoteCastingDisplay display = new VoteCastingDisplay(sample, manager);
         VoterLogin login = new VoterLogin(manager);
-        root.getChildren().addAll(display, login);
+        DualLoginPage loginPage = new DualLoginPage(manager);
+
+        root.getChildren().addAll(display, login, loginPage);
+
 
         Scene scene = new Scene(root, 800, 700);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
