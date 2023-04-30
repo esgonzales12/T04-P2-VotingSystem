@@ -5,7 +5,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import org.teamfour.display.components.LoadingScreen;
 import org.teamfour.display.enums.RequestType;
-import org.teamfour.display.manager.DisplayManager;
+import org.teamfour.display.DisplayManager;
 import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.model.db.Ballot;
 import org.teamfour.model.db.Vote;

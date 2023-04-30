@@ -6,7 +6,7 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import org.teamfour.display.util.ColorProvider;
+import org.teamfour.display.util.ColorTheme;
 
 public class LoadingScreen extends VBox {
     private String text;
@@ -20,7 +20,7 @@ public class LoadingScreen extends VBox {
         indicator.setPrefSize(250, 250);
         indicator.setMinWidth(250);
         indicator.setMinHeight(250);
-        setBackground(Background.fill(ColorProvider.POPUP_BG));
+        setBackground(Background.fill(ColorTheme.POPUP_BG));
         setAlignment(Pos.CENTER);
         getChildren().add(indicator);
         getChildren().add(label);

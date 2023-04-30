@@ -9,7 +9,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
 import org.teamfour.display.KeyPressListener;
 import org.teamfour.display.components.keyboard.HexKeyboard;
-import org.teamfour.display.util.ColorProvider;
+import org.teamfour.display.util.ColorTheme;
 import org.teamfour.display.util.KeyCodes;
 
 
@@ -44,7 +44,7 @@ public class AdminSignIn extends VBox implements KeyPressListener {
 
         setSpacing(SIGN_IN_SPACING);
         setAlignment(Pos.CENTER);
-        setBackground(Background.fill(ColorProvider.THEME_1));
+        setBackground(Background.fill(ColorTheme.THEME_1));
         getChildren().addAll(usernameField, passwordField, keypad, formSubmit);
     }
 

@@ -16,7 +16,7 @@ import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.display.enums.RequestType;
 import org.teamfour.display.enums.ResponseType;
-import org.teamfour.display.manager.DisplayManager;
+import org.teamfour.display.DisplayManager;
 import org.teamfour.display.util.KeyCodes;
 
 public class VoterLogin extends Panel implements KeyPressListener {

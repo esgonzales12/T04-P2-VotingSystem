@@ -1,4 +1,4 @@
-package org.teamfour.display.manager;
+package org.teamfour.display;
 
 import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;

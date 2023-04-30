@@ -2,7 +2,7 @@ package org.teamfour.display.util;
 
 import javafx.scene.paint.Color;
 
-public class ColorProvider {
+public class ColorTheme {
 
     /**
      * Blues

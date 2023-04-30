@@ -6,7 +6,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
-import org.teamfour.display.util.ColorProvider;
+import org.teamfour.display.util.ColorTheme;
 import org.teamfour.system.enums.Operation;
 
 public class AdminMenuComponent extends HBox {
@@ -33,10 +33,10 @@ public class AdminMenuComponent extends HBox {
 
             info.iconSizeProperty().bind(operationButton.heightProperty().multiply(0.8));
             info.setFill(Color.TRANSPARENT);
-            info.setStroke(ColorProvider.THEME_4);
-            info.setOnMouseEntered(event -> info.setStroke(ColorProvider.THEME_5));
-            info.setOnMouseExited(event -> info.setStroke(ColorProvider.THEME_4));
-            info.setOnMousePressed(e -> info.setFill(ColorProvider.THEME_4));
+            info.setStroke(ColorTheme.THEME_4);
+            info.setOnMouseEntered(event -> info.setStroke(ColorTheme.THEME_5));
+            info.setOnMouseExited(event -> info.setStroke(ColorTheme.THEME_4));
+            info.setOnMousePressed(e -> info.setFill(ColorTheme.THEME_4));
             info.setOnMouseReleased(e -> info.setFill(Color.TRANSPARENT));
             info.setStrokeWidth(1.5);
 

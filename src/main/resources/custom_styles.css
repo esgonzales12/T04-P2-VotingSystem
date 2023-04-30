@@ -100,8 +100,18 @@
     -fx-text-fill: #333;
     -fx-fill: #333;
     -fx-background-color: #e6e6e6; }
+
 .pagination {
     -fx-background-color: #343a40;
+}
+
+
+.pagination > .pagination-control > .page-information {
+    -fx-padding: 0.416em 0 0 0;
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-fill: white;
 }
 
 .pagination > .pagination-control > .control-box {

@@ -10,8 +10,8 @@ import javafx.scene.text.Text;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.teamfour.display.components.InfoPopup;
-import org.teamfour.display.manager.DisplayManager;
-import org.teamfour.display.util.ColorProvider;
+import org.teamfour.display.DisplayManager;
+import org.teamfour.display.util.ColorTheme;
 import org.teamfour.display.util.OperationDescription;
 import org.teamfour.system.enums.Operation;
 
@@ -53,7 +53,7 @@ public class AdminMenu extends StackPane {
         menu.setSpacing(10);
 
         contextDisplay.setAlignment(Pos.CENTER);
-        contextDisplay.setBackground(Background.fill(ColorProvider.THEME_5));
+        contextDisplay.setBackground(Background.fill(ColorTheme.THEME_5));
         contextDisplay.setPadding(new Insets(20));
         contextDisplay.prefWidthProperty().bind(container.widthProperty().multiply(0.3));
 

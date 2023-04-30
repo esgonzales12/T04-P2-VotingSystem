@@ -7,7 +7,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
-import org.teamfour.display.util.ColorProvider;
+import org.teamfour.display.util.ColorTheme;
 
 public class InfoPopup extends HBox {
     public final Button exitButton;
@@ -28,7 +28,7 @@ public class InfoPopup extends HBox {
     }
 
     private void init() {
-        setBackground(Background.fill(ColorProvider.POPUP_BG));
+        setBackground(Background.fill(ColorTheme.POPUP_BG));
         setAlignment(Pos.CENTER);
 
         exitButton.setAlignment(Pos.CENTER);

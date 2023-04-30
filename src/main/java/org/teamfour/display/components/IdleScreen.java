@@ -2,6 +2,7 @@ package org.teamfour.display.components;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -20,18 +21,23 @@ public class IdleScreen extends VBox {
         setBackground(Background.fill(Color.valueOf("#006ee5")));
 
         FontIcon globe = new FontIcon(FontAwesome.GLOBE);
-        globe.setIconSize(50);
+        globe.setIconSize(200);
 
 
-        Text headerText = new Text("Voting System Idle");
+        Text headerText = new Text("Voting System Idle\n\n");
         headerText.setFill(Color.WHITE);
         headerText.getStyleClass().setAll("h1");
 
-        Text systemStatus = new Text("System status: " + status + "\n"
-        + "System version: 1.0\n" + "No ballot configured\n");
-        systemStatus.getStyleClass().setAll("p", "code");
+        Text systemStatus = new Text("System status: " + status + "\n\n"
+        + "System version: 1.0\n\n" + "Configuration Status: No ballot configured\n\n");
+        systemStatus.getStyleClass().setAll("h4", "code", "strong");
+        systemStatus.setFill(Color.WHITE);
+
+        HBox container = new HBox(new TextFlow(headerText, systemStatus));
+        container.maxWidthProperty().bind(this.widthProperty().multiply(0.6));
+        container.setAlignment(Pos.CENTER);
 
         getChildren().add(globe);
-        getChildren().add(new TextFlow(headerText, systemStatus));
+        getChildren().add(container);
     }
 }

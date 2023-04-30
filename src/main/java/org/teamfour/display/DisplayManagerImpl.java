@@ -1,4 +1,4 @@
-package org.teamfour.display.manager;
+package org.teamfour.display;
 
 import javafx.scene.Node;
 import javafx.scene.layout.Background;

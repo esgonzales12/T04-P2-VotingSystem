@@ -4,9 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -18,7 +20,6 @@ import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.voting.CandidateCard;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
 import org.teamfour.display.enums.Notification;
-import org.teamfour.display.manager.DisplayManagerImpl;
 import org.teamfour.model.db.Ballot;
 import org.teamfour.system.VotingSystem;
 import org.teamfour.system.enums.Status;
@@ -36,7 +37,7 @@ public class Gui extends Application {
     VotingSystem votingSystem = new VotingSystem() {
         @Override
         public Status getStatus() {
-            return Status.IN_PROCESS;
+            return Status.PRE_ELECTION;
         }
 
         @Override
@@ -52,11 +53,12 @@ public class Gui extends Application {
         ballot = getBallot();
         DisplayManagerImpl displayManager = new DisplayManagerImpl(votingSystem);
 
-        VBox notificationPane = new VBox();
+        HBox notificationPane = new HBox();
+        notificationPane.setAlignment(Pos.CENTER);
         List<Button> notificationButtons = new ArrayList<>();
         for (Notification notification: Notification.values()) {
             Button button = new Button(notification.toString());
-            button.getStyleClass().setAll("btn", "btn-lg", "btn-default");
+            button.getStyleClass().setAll("btn", "btn-sm", "btn-default");
             button.setOnMouseClicked(event -> displayManager.handleNotification(notification));
             notificationButtons.add(button);
         }
@@ -64,7 +66,7 @@ public class Gui extends Application {
         notificationPane.setSpacing(10);
         BorderPane root = new BorderPane();
         root.setCenter(displayManager);
-        root.setRight(notificationPane);
+        root.setBottom(notificationPane);
 
         Scene scene = new Scene(root, 1000, 900);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
@@ -75,7 +77,7 @@ public class Gui extends Application {
         AnimationTimer animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                if (Duration.ofNanos(now - curr).toSeconds() > 3) {
+                if (Duration.ofNanos(now - curr).toSeconds() > 1) {
                     displayManager.handleNotification(Notification.STARTUP_COMPLETE);
                     stop();
                 }
