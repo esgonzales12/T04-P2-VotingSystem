@@ -1,4 +1,4 @@
-package org.teamfour.display.components.voting.base;
+package org.teamfour.display.components.voting.common;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;

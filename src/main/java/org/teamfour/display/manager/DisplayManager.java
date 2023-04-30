@@ -7,8 +7,6 @@ import org.teamfour.system.enums.Operation;
 public interface DisplayManager {
     ResolutionResponse resolve(ResolutionRequest request);
 
-    void handleChainExit();
-
     void dispatchOperation(Operation operation);
 
     void handleNotification();

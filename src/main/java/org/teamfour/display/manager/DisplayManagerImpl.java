@@ -4,15 +4,10 @@ import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.system.enums.Operation;
 
-public class ManagerImpl implements DisplayManager {
+public class DisplayManagerImpl implements DisplayManager {
     @Override
     public ResolutionResponse resolve(ResolutionRequest request) {
         return null;
-    }
-
-    @Override
-    public void handleChainExit() {
-
     }
 
     @Override

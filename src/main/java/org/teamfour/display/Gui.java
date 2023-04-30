@@ -46,11 +46,6 @@ public class Gui extends Application {
         }
 
         @Override
-        public void handleChainExit() {
-
-        }
-
-        @Override
         public void dispatchOperation(Operation operation) {
 
         }

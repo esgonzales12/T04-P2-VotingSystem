@@ -4,7 +4,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import org.apache.commons.lang3.StringUtils;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
-import org.teamfour.display.components.voting.base.OptionCard;
+import org.teamfour.display.components.voting.common.OptionCard;
+import org.teamfour.display.components.voting.common.VoteValue;
 import org.teamfour.display.util.Icons;
 import org.teamfour.model.db.Vote;
 

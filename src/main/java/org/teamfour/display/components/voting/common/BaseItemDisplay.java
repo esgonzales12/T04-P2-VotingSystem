@@ -1,4 +1,4 @@
-package org.teamfour.display.components.voting.base;
+package org.teamfour.display.components.voting.common;
 
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;

@@ -27,7 +27,7 @@ public class VoteCastingDisplay extends StackPane {
         render();
     }
 
-    private void render() {
+    public void render() {
         itemPages = new ItemPaginatedDisplay(ballot);
         finalizeDisplay = new BallotFinalizeDisplay();
         finalizeDisplay.setVisible(false);
@@ -74,7 +74,7 @@ public class VoteCastingDisplay extends StackPane {
             displayManager
                     .resolve(new ResolutionRequest.Builder()
                             .withVotes(itemPages.getItemVotes())
-                            .withType(RequestType.FINALIZE)
+                            .withType(RequestType.CAST_VOTE)
                             .build());
         };
     }

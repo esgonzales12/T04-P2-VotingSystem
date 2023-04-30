@@ -8,7 +8,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
-import org.teamfour.display.components.voting.base.BaseItemDisplay;
+import org.teamfour.display.components.voting.common.BaseItemDisplay;
 import org.teamfour.display.components.voting.common.BallotUtils;
 import org.teamfour.model.db.Item;
 import org.teamfour.model.db.Option;

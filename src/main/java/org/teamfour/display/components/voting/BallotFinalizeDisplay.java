@@ -11,6 +11,7 @@ import org.kordamp.bootstrapfx.scene.layout.Panel;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.teamfour.display.components.voting.common.BallotUtils;
+import org.teamfour.display.components.voting.common.VoteValue;
 import org.teamfour.display.util.Icons;
 import org.teamfour.model.db.*;
 import org.teamfour.model.enums.ItemType;
