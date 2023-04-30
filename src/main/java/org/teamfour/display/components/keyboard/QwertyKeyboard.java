@@ -5,16 +5,17 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.util.KeyCodes;
 
 public class QwertyKeyboard extends VBox {
     private static final double KEY_SIZE = 50;
     private static final double KEY_GAP = 5;
-    private static final String[] ROW_KEYS = {"QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"};
+    private static final String[] ROW_KEYS = {"1234567890", "QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"};
     private final HBox[] rows;
     private KeyPressListener listener;
 
     public QwertyKeyboard() {
-        rows = new HBox[4];
+        rows = new HBox[5];
         init();
     }
 
@@ -27,7 +28,9 @@ public class QwertyKeyboard extends VBox {
         for (int i = 0; i < ROW_KEYS.length; i++) {
             addKeys(rows[i], ROW_KEYS[i]);
         }
-        rows[3].getChildren().add(spaceBar());
+        rows[0].getChildren().add(backSpace());
+        rows[2].getChildren().add(enterKey());
+        rows[4].getChildren().add(spaceBar());
         getChildren().addAll(rows);
         setSpacing(KEY_GAP);
     }
@@ -65,10 +68,40 @@ public class QwertyKeyboard extends VBox {
         spaceBar.setAlignment(Pos.CENTER);
         spaceBar.setOnMouseClicked(click -> {
             if (listener != null) {
-                listener.receiveKey("SPACE");
+                listener.receiveKey(" ");
             }
         });
         return spaceBar;
+    }
+
+    private Label enterKey() {
+        Label enter = new Label("ENTER");
+        enter.getStyleClass().setAll("key", "key-default");
+        enter.setMinWidth(KEY_SIZE * 2);
+        enter.setMinHeight(KEY_SIZE);
+        enter.setMinHeight(KEY_SIZE);
+        enter.setAlignment(Pos.CENTER);
+        enter.setOnMouseClicked(click -> {
+            if (listener != null) {
+                listener.receiveKey(KeyCodes.ENTER);
+            }
+        });
+        return enter;
+    }
+
+    private Label backSpace() {
+        Label backSpace = new Label("DELETE");
+        backSpace.getStyleClass().setAll("key", "key-default");
+        backSpace.setMinWidth(KEY_SIZE * 2);
+        backSpace.setMinHeight(KEY_SIZE);
+        backSpace.setMinHeight(KEY_SIZE);
+        backSpace.setAlignment(Pos.CENTER);
+        backSpace.setOnMouseClicked(click -> {
+            if (listener != null) {
+                listener.receiveKey(KeyCodes.DELETE);
+            }
+        });
+        return backSpace;
     }
 
 
