@@ -2,6 +2,7 @@ package org.teamfour.display.manager;
 
 import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;
+import org.teamfour.display.enums.Notification;
 import org.teamfour.system.enums.Operation;
 
 public interface DisplayManager {
@@ -9,5 +10,5 @@ public interface DisplayManager {
 
     void dispatchOperation(Operation operation);
 
-    void handleNotification();
+    void handleNotification(Notification notification);
 }

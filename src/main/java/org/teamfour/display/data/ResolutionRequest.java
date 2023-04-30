@@ -20,6 +20,10 @@ public class ResolutionRequest {
         this.adminPassword = builder.adminPassword;
     }
 
+    public RequestType getType() {
+        return type;
+    }
+
     @Override
     public String toString() {
         return "ResolutionRequest{" +

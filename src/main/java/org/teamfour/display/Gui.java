@@ -2,63 +2,46 @@ package org.teamfour.display;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import org.teamfour.dao.VotingDao;
 import org.teamfour.display.components.VoterLogin;
 import org.teamfour.display.components.admin.DualLoginPage;
-import org.teamfour.display.components.voting.VoteCastingDisplay;
 import org.teamfour.display.components.voting.CandidateCard;
-import org.teamfour.display.enums.ResponseType;
-import org.teamfour.display.manager.DisplayManager;
-import org.teamfour.display.data.ResolutionRequest;
-import org.teamfour.display.data.ResolutionResponse;
+import org.teamfour.display.components.voting.VoteCastingDisplay;
+import org.teamfour.display.enums.Notification;
+import org.teamfour.display.manager.DisplayManagerImpl;
 import org.teamfour.model.db.Ballot;
-import org.teamfour.system.enums.Operation;
+import org.teamfour.system.VotingSystem;
+import org.teamfour.system.enums.Status;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Gui extends Application {
 
-    String[] politicians = {
-            "Joe Biden, Democratic Party",
-            "Kamala Harris, Democratic Party",
-            "Nancy Pelosi, Democratic Party",
-            "Chuck Schumer, Democratic Party",
-            "Mitch McConnell, Republican Party",
-            "Kevin McCarthy, Republican Party",
-            "Liz Cheney, Republican Party",
-            "Ted Cruz, Republican Party",
-            "Bernie Sanders, Independent",
-            "Alexandria Ocasio-Cortez, Democratic Party"
-    };
-
-    DisplayManager manager = new DisplayManager() {
-        boolean temp = false;
+    Ballot ballot;
+    VotingSystem votingSystem = new VotingSystem() {
         @Override
-        public ResolutionResponse resolve(ResolutionRequest request) {
-            System.out.println(request.toString());
-            temp = !temp;
-            if (temp) {
-                return new ResolutionResponse(ResponseType.SUCCESS);
-            }
-            return new ResolutionResponse(ResponseType.FAILURE);
+        public Status getStatus() {
+            return Status.IN_PROCESS;
         }
 
         @Override
-        public void dispatchOperation(Operation operation) {
-
-        }
-
-        @Override
-        public void handleNotification() {
-
+        public Ballot getBallot() {
+            return ballot == null? getBallot() : ballot;
         }
     };
 
@@ -66,24 +49,39 @@ public class Gui extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        ballot = getBallot();
+        DisplayManagerImpl displayManager = new DisplayManagerImpl(votingSystem);
 
-
-        final org.teamfour.model.db.Ballot sample = getBallot();
-
-        if (sample == null) System.exit(0);
-        StackPane root = new StackPane();
-        VoteCastingDisplay display = new VoteCastingDisplay(sample, manager);
-        VoterLogin login = new VoterLogin(manager);
-        DualLoginPage loginPage = new DualLoginPage(manager);
-
-        root.getChildren().addAll(display, login, loginPage);
-
+        VBox notificationPane = new VBox();
+        List<Button> notificationButtons = new ArrayList<>();
+        for (Notification notification: Notification.values()) {
+            Button button = new Button(notification.toString());
+            button.getStyleClass().setAll("btn", "btn-lg", "btn-default");
+            button.setOnMouseClicked(event -> displayManager.handleNotification(notification));
+            notificationButtons.add(button);
+        }
+        notificationPane.getChildren().addAll(notificationButtons);
+        notificationPane.setSpacing(10);
+        BorderPane root = new BorderPane();
+        root.setCenter(displayManager);
+        root.setRight(notificationPane);
 
         Scene scene = new Scene(root, 800, 700);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         scene.getStylesheets().add(getClass().getResource("/custom_styles.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
+        final long curr = System.nanoTime();
+        AnimationTimer animationTimer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (Duration.ofNanos(now - curr).toSeconds() > 3) {
+                    displayManager.handleNotification(Notification.STARTUP_COMPLETE);
+                    stop();
+                }
+            }
+        };
+        animationTimer.start();
     }
 
     private Ballot getBallot() {
@@ -116,6 +114,16 @@ public class Gui extends Application {
         option.setMaxWidth(300);
         option.setMinWidth(300);
         return option;
+    }
+
+    private void sample() {
+        final org.teamfour.model.db.Ballot sample = getBallot();
+        if (sample == null) System.exit(0);
+        StackPane root = new StackPane();
+        VoteCastingDisplay display = new VoteCastingDisplay(sample, null);
+        VoterLogin login = new VoterLogin(null);
+        DualLoginPage loginPage = new DualLoginPage(null);
+        root.getChildren().addAll(display, login, loginPage);
     }
 
 }

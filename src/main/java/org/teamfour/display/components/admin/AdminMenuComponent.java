@@ -40,14 +40,13 @@ public class AdminMenuComponent extends HBox {
             info.setOnMouseReleased(e -> info.setFill(Color.TRANSPARENT));
             info.setStrokeWidth(1.5);
 
-            switch (operation) {
-                case INITIATE_VOTING ->
-                        operationButton.setText("Initiate Voting Window");
-                case VOTER_RESET ->
-                        operationButton.setText("Reset Voter Progress");
-                case BALLOT_CONFIGURATION ->
-                        operationButton.setText("Initiate Ballot Configuration");
-            }
+            operationButton.setText(operation.toString());
+//            switch (operation) {
+//                case BEGIN_VOTING_WINDOW ->
+//                        operationButton.setText("Initiate Voting Window");
+//                case CONFIGURATION ->
+//                        operationButton.setText("Initiate Ballot Configuration");
+//            }
             component.getChildren().addAll(info, operationButton);
             return component;
         }

@@ -416,3 +416,271 @@ WHERE option.id = '48';
 2023-58-28 15:58:10.806 ${sys:env} [main] INFO  org.teamfour.logging.StaticLogBase - SELECT * FROM option
 WHERE option.id = '49';
 
+2023-24-30 15:24:43.761 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.784 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.802 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.819 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.835 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.852 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.868 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.884 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.901 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.919 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.935 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.951 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.969 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:43.984 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.001 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.018 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.036 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.052 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.069 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.085 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.101 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.119 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.134 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.152 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.168 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.184 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.201 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.218 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.235 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.251 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.268 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.285 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.301 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.319 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.335 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.352 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.369 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.385 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.401 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.418 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.434 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.451 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.468 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.485 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.501 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.518 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.535 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.551 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.569 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.585 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.601 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.618 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.635 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.652 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.668 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.685 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.701 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.718 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.735 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.752 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.768 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.785 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.802 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.819 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.835 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.852 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.868 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.885 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.901 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.918 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.935 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.952 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.968 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:44.985 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.002 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.019 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.035 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.052 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.068 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.085 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.101 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.118 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.135 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.152 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.169 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.185 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.201 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.219 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.235 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.252 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.269 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.285 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.302 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.321 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.336 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.352 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.369 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.385 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.402 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.419 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.435 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.452 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.469 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.485 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.501 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.518 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.535 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.552 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.569 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.585 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.602 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.618 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.636 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.652 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.668 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.685 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.701 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.719 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.735 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.752 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.768 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.785 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.802 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.818 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.835 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.852 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.869 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.886 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.902 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.919 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.935 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.952 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.969 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:45.985 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.002 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.019 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.035 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.053 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.069 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.085 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.103 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.119 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.135 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.153 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.169 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.185 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.202 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.218 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.235 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.253 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.268 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.286 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.303 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.319 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.336 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.352 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.369 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.385 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.402 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.419 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.436 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.452 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.469 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.485 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.502 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.518 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.536 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.552 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.569 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.585 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.602 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.619 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.671 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.686 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.703 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.719 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.748 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-24-30 15:24:46.753 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-25-30 15:25:21.843 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-25-30 15:25:53.911 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-26-30 15:26:00.808 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-26-30 15:26:02.946 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-26-30 15:26:05.078 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: CAST_VOTE
+2023-29-30 15:29:09.215 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-29-30 15:29:20.563 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-29-30 15:29:24.811 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-29-30 15:29:29.711 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-29-30 15:29:32.393 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: CAST_VOTE
+2023-29-30 15:29:48.841 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-31-30 15:31:23.945 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-31-30 15:31:28.261 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-31-30 15:31:29.923 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-31-30 15:31:30.552 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: CAST_VOTE
+2023-31-30 15:31:32.979 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-31-30 15:31:36.804 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-31-30 15:31:40.887 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-31-30 15:31:45.054 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-31-30 15:31:47.087 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-31-30 15:31:47.619 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: CAST_VOTE
+2023-31-30 15:31:49.777 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-31-30 15:31:55.541 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_EXIT
+2023-37-30 15:37:13.152 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-38-30 15:38:01.480 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-38-30 15:38:08.402 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-38-30 15:38:17.170 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-41-30 15:41:11.846 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-41-30 15:41:15.233 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-41-30 15:41:23.491 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-42-30 15:42:03.897 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-42-30 15:42:17.032 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-42-30 15:42:18.453 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-42-30 15:42:31.525 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-42-30 15:42:37.906 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-42-30 15:42:37.911 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-45-30 15:45:44.424 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-45-30 15:45:46.707 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-45-30 15:45:56.813 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-45-30 15:45:58.419 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-46-30 15:46:00.830 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-46-30 15:46:03.015 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-46-30 15:46:04.725 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_CLOSE
+2023-46-30 15:46:06.135 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:06.997 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:07.793 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:08.471 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:08.643 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:09.175 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:09.655 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:10.025 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:10.203 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:10.475 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:10.621 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:10.791 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:11.015 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:11.160 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:11.296 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:11.439 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:11.609 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:12.107 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:12.683 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:14.375 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:14.983 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:15.482 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:15.885 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:16.183 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:16.449 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:16.767 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:18.353 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:19.111 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-46-30 15:46:19.400 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-46-30 15:46:21.883 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-46-30 15:46:41.558 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-46-30 15:46:52.751 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-46-30 15:46:52.755 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-53-30 15:53:47.210 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-53-30 15:53:51.699 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-53-30 15:53:53.654 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: FINALIZE
+2023-53-30 15:53:55.010 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: CAST_VOTE
+2023-53-30 15:53:58.416 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-53-30 15:53:59.456 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-54-30 15:54:08.708 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 15:54:13.066 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 15:54:13.068 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-54-30 15:54:15.100 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-54-30 15:54:21.414 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-54-30 15:54:23.122 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-54-30 15:54:28.250 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-54-30 15:54:39.632 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.manager.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
