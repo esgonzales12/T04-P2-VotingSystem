@@ -1,7 +1,0 @@
-{
-  "election": "election.json",
-  "election_offices": "election_offices.json",
-  "election_items": "election_items.json",
-  "office_candidates": "office_candidates.json",
-  "item_candidates": "item_candidates.json"
-}

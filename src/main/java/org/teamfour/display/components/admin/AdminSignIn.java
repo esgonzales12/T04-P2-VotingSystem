@@ -15,7 +15,7 @@ import org.teamfour.display.util.KeyCodes;
 
 public class AdminSignIn extends VBox implements KeyPressListener {
 
-    private static final double SIGN_IN_SPACING = 20;
+    private static final double SIGN_IN_SPACING = 10;
     private final HexKeyboard keypad;
     public final Button formSubmit;
     public final PasswordField passwordField;
@@ -75,7 +75,7 @@ public class AdminSignIn extends VBox implements KeyPressListener {
 
     private void initTextField(TextField textField) {
         textField.setTextFormatter(new TextFormatter<String>(KeyCodes.HEX_FILTER));
-        textField.maxWidthProperty().bind(this.widthProperty().multiply(0.25));
+        textField.maxWidthProperty().bind(this.widthProperty().multiply(0.35));
         textField.getStyleClass().setAll("alert", "strong");
     }
 

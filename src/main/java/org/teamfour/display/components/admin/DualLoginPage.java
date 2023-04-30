@@ -31,7 +31,7 @@ public class DualLoginPage extends Panel {
     private Map<Integer, AdminSignIn> signInPages;
     private int signInCount;
     private StackPane content;
-    private HBox footer;
+    private HBox footerNotification;
     private Text authorizedUsersLabel;
     private Text footerText;
     private List<String> currentlyAuthorized;
@@ -42,7 +42,7 @@ public class DualLoginPage extends Panel {
         this.signInPages = new HashMap<>();
         this.content = new StackPane();
         this.currentlyAuthorized = new ArrayList<>();
-        this.footer = new HBox();
+        this.footerNotification = new HBox();
         this.footerText = new Text();
         this.authorizedUsersLabel = new Text();
         init();
@@ -61,13 +61,14 @@ public class DualLoginPage extends Panel {
         authorizedUsersLabel.setText(String.format("0/%d users authorized", USERS_REQUIRED));
         authorizedUsersLabel.getStyleClass().setAll("p", "strong");
         authorizedUsersLabel.setFill(Color.WHITE);
-        footer.getStyleClass().setAll("alert");
-        footer.getChildren().add(footerText);
-        footer.setVisible(false);
+        footerText.setText("Two polling officials are required for authorization");
+        footerNotification.getStyleClass().setAll("alert");
+        footerNotification.getChildren().add(footerText);
+        footerNotification.setVisible(true);
 
         setBody(content);
         setHeading(getHeader());
-        setFooter(footer);
+        setFooter(footerNotification);
         getStyleClass().setAll("login", "login-panel");
     }
 
@@ -113,9 +114,9 @@ public class DualLoginPage extends Panel {
         ParallelTransition parallelTransition
                 = new ParallelTransition(getTransition(username), getTransition(password));
         parallelTransition.play();
-        footer.getStyleClass().setAll("alert", "alert-danger");
+        footerNotification.getStyleClass().setAll("alert", "alert-danger");
         footerText.setText("Invalid username or password");
-        footer.setVisible(true);
+        footerNotification.setVisible(true);
     }
 
     private void handleLoginApproved(String username) {
@@ -127,11 +128,11 @@ public class DualLoginPage extends Panel {
         authorizedUsersLabel.setText(String
                 .format("%d/%d users authorized", signInCount, USERS_REQUIRED));
 
-        footer.getStyleClass().setAll("alert", "alert-success");
+        footerNotification.getStyleClass().setAll("alert", "alert-success");
         footerText.setText(String
                 .format("User %d successfully signed in", signInCount));
 
-        footer.setVisible(true);
+        footerNotification.setVisible(true);
 
         if (signInCount >= USERS_REQUIRED) {
             content.getChildren().add(new LoadingScreen());

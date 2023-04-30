@@ -66,7 +66,7 @@ public class Gui extends Application {
         root.setCenter(displayManager);
         root.setRight(notificationPane);
 
-        Scene scene = new Scene(root, 800, 700);
+        Scene scene = new Scene(root, 1000, 900);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         scene.getStylesheets().add(getClass().getResource("/custom_styles.css").toExternalForm());
         primaryStage.setScene(scene);
