@@ -2,6 +2,7 @@ package org.teamfour.system;
 import org.teamfour.system.enums.Authority;
 import java.util.HashMap;
 import java.util.Map;
+import org.teamfour.system.VotingSystem;
 public class UserProfile {
     private String username;
     private String password;
@@ -80,4 +81,5 @@ public class UserProfile {
                 ", authority=" + authority +
                 '}';
     }
+
 }

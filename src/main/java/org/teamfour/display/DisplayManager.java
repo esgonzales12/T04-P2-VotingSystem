@@ -11,4 +11,5 @@ public interface DisplayManager {
     void dispatchOperation(Operation operation);
 
     void handleNotification(Notification notification);
+
 }

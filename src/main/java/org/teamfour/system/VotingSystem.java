@@ -9,4 +9,6 @@ public interface VotingSystem {
     Ballot getBallot();
 
     void setStatus(Status status);
+
+
 }
