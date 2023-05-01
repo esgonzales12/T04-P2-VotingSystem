@@ -56,6 +56,7 @@ public class UserProfile {
     public void setAuthority(Authority authority) {
         this.authority = authority;
     }
+    //
     private final Map<String, String> userMap = new HashMap<>();
 
     public boolean isUsernameUnique(String username) {
