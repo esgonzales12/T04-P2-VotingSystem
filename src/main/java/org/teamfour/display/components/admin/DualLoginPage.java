@@ -19,6 +19,7 @@ import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.display.enums.RequestType;
 import org.teamfour.display.enums.ResponseType;
 import org.teamfour.display.DisplayManager;
+import org.teamfour.system.enums.Operation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +28,7 @@ import java.util.Map;
 
 public class DualLoginPage extends Panel {
     private static final int USERS_REQUIRED = 2;
+    private final Operation operation;
     private final DisplayManager displayManager;
     private Map<Integer, AdminSignIn> signInPages;
     private int signInCount;
@@ -36,7 +38,8 @@ public class DualLoginPage extends Panel {
     private Text footerText;
     private List<String> currentlyAuthorized;
 
-    public DualLoginPage(DisplayManager displayManager) {
+    public DualLoginPage(Operation operation, DisplayManager displayManager) {
+        this.operation = operation;
         this.displayManager = displayManager;
         this.signInCount = 0;
         this.signInPages = new HashMap<>();
@@ -87,6 +90,7 @@ public class DualLoginPage extends Panel {
             ResolutionResponse response = displayManager.resolve(
                     new ResolutionRequest.Builder()
                             .withType(RequestType.ADMIN_LOGIN)
+                            .withOperation(operation)
                             .withAdminUsername(username)
                             .withAdminPassword(password)
                             .build());
@@ -138,6 +142,7 @@ public class DualLoginPage extends Panel {
             content.getChildren().add(new LoadingScreen());
             displayManager.resolve(new ResolutionRequest.Builder()
                             .withType(RequestType.ADMIN_LOGIN_COMPLETE)
+                            .withOperation(operation)
                             .build());
         }
 

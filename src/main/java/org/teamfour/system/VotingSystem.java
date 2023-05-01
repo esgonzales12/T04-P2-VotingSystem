@@ -7,4 +7,6 @@ public interface VotingSystem {
     Status getStatus();
 
     Ballot getBallot();
+
+    void setStatus(Status status);
 }

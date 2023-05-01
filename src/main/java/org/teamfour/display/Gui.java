@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
@@ -35,14 +34,21 @@ public class Gui extends Application {
 
     Ballot ballot;
     VotingSystem votingSystem = new VotingSystem() {
+        private Status status = Status.PRE_ELECTION;
+
         @Override
         public Status getStatus() {
-            return Status.PRE_ELECTION;
+            return status;
         }
 
         @Override
         public Ballot getBallot() {
             return ballot == null? getBallot() : ballot;
+        }
+
+        @Override
+        public void setStatus(Status status) {
+            this.status = status;
         }
     };
 
@@ -124,7 +130,7 @@ public class Gui extends Application {
         StackPane root = new StackPane();
         VoteCastingDisplay display = new VoteCastingDisplay(sample, null);
         VoterLogin login = new VoterLogin(null);
-        DualLoginPage loginPage = new DualLoginPage(null);
+        DualLoginPage loginPage = new DualLoginPage(null, null);
         root.getChildren().addAll(display, login, loginPage);
     }
 

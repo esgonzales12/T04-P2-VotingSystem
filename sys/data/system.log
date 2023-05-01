@@ -81,3 +81,74 @@
 2023-25-30 17:25:14.396 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
 2023-25-30 17:25:21.466 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
 2023-25-30 17:25:58.172 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-53-30 17:53:51.550 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-53-30 17:53:55.257 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-53-30 17:53:59.281 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-54-30 17:54:04.259 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 17:54:08.457 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 17:54:08.460 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-54-30 17:54:40.235 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-54-30 17:54:42.926 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-54-30 17:54:43.666 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-54-30 17:54:49.291 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 17:54:55.224 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-54-30 17:54:55.227 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-55-30 17:55:05.676 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-55-30 17:55:07.048 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-55-30 17:55:12.080 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-55-30 17:55:20.509 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-55-30 17:55:20.517 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-56-30 17:56:32.675 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-56-30 17:56:36.334 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-56-30 17:56:37.369 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-56-30 17:56:44.424 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-56-30 17:56:49.530 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-56-30 17:56:49.532 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-56-30 17:56:58.333 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-57-30 17:57:19.211 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-57-30 17:57:25.564 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-57-30 17:57:30.230 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-57-30 17:57:30.232 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-57-30 17:57:40.076 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-57-30 17:57:43.014 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: END_VOTE_PROCESS
+2023-57-30 17:57:49.150 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-57-30 17:57:56.230 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-57-30 17:57:56.232 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-58-30 17:58:05.162 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-58-30 17:58:08.342 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: CONFIGURATION
+2023-59-30 17:59:31.096 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-59-30 17:59:38.663 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-59-30 17:59:39.393 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-59-30 17:59:44.704 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-59-30 17:59:48.396 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-59-30 17:59:48.399 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-59-30 17:59:51.337 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-00-30 18:00:33.692 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-00-30 18:00:38.062 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-00-30 18:00:42.071 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-00-30 18:00:42.073 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-00-30 18:00:47.168 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-00-30 18:00:49.048 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: END_VOTE_PROCESS
+2023-00-30 18:00:54.325 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-00-30 18:00:59.894 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-00-30 18:00:59.903 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-01-30 18:01:03.941 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-01-30 18:01:05.205 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: CONFIGURATION
+2023-01-30 18:01:09.018 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-01-30 18:01:15.227 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-01-30 18:01:15.229 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-01-30 18:01:23.771 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-01-30 18:01:31.755 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-01-30 18:01:35.501 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-01-30 18:01:36.069 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-01-30 18:01:37.285 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_CLOSE
+2023-01-30 18:01:38.333 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-01-30 18:01:38.881 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_CLOSE
+2023-01-30 18:01:39.331 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-01-30 18:01:39.764 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-01-30 18:01:42.242 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-01-30 18:01:43.185 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-01-30 18:01:43.595 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-01-30 18:01:43.741 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-01-30 18:01:44.111 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-01-30 18:01:47.928 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW

@@ -1,5 +1,6 @@
 package org.teamfour.display;
 
+import javafx.animation.AnimationTimer;
 import javafx.scene.Node;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
@@ -23,6 +24,7 @@ import org.teamfour.system.VotingSystem;
 import org.teamfour.system.enums.Operation;
 import org.teamfour.system.enums.Status;
 
+import java.time.Duration;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -83,9 +85,20 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                 return new ResolutionResponse(ResponseType.SUCCESS);
             }
             case ADMIN_LOGIN_COMPLETE -> {
-                if (!adminStack.isEmpty()) {
-                    adminStack.peekFirst().nextPage();
-                }
+                LoadingScreen loadingScreen = new LoadingScreen();
+                loadingScreen.setText("Performing operation: " + request.getOperation());
+                clearAndPush(loadingScreen);
+                long start = System.nanoTime();
+                AnimationTimer animationTimer = new AnimationTimer() {
+                    @Override
+                    public void handle(long now) {
+                        if (Duration.ofNanos(now - start).toSeconds() > 1) {
+                            performOperation(request.getOperation());
+                            stop();
+                        }
+                    }
+                };
+                animationTimer.start();
             }
             case OPERATION_EXIT -> {
                 AdminMenu adminMenu = new AdminMenu(this,
@@ -103,19 +116,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         if (operation == Operation.BEGIN_VOTE_COUNTING) {
             ballot = null;
         }
-        StepDisplay stepDisplay = new StepDisplay();
-        stepDisplay.addPage(new DualLoginPage(this));
-
-        PlaceHolder placeHolder = new PlaceHolder();
-        placeHolder
-                .exit
-                .setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder()
-                                            .withType(RequestType.OPERATION_EXIT)
-                                            .build()));
-        stepDisplay.addPage(placeHolder);
-        stepDisplay.render();
-        adminStack.add(stepDisplay);
-        clearAndPush(stepDisplay);
+        clearAndPush(new DualLoginPage(operation, this));
     }
 
     @Override
@@ -166,6 +167,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
             }
             case VOTE_COUNTING -> {
                 // TODO: CREATE VOTE COUNT VIEW
+                clearAndPush(new IdleScreen(Status.VOTE_COUNTING));
             }
         }
     }
@@ -174,5 +176,37 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         getChildren().clear();
         displayStack.add(node);
         getChildren().add(node);
+    }
+
+    private void performOperation(Operation operation) {
+        PlaceHolder placeHolder = new PlaceHolder();
+        switch (operation) {
+            case BEGIN_VOTING_WINDOW -> {
+                votingSystem.setStatus(Status.IN_PROCESS);
+                placeHolder.text.setText("Voting window has been started");
+            }
+            case CONFIGURATION -> {
+                votingSystem.setStatus(Status.PRE_ELECTION);
+                placeHolder.text.setText("Configuration Complete, (display ballot format)");
+            }
+            case VOTE_COUNT_EXPORT -> {
+                log.info("PERFORMING VOTE EXPORT");
+                placeHolder.text.setText("Vote tabulation results have been exported");
+            }
+            case SYSTEM_LOG_EXPORT -> {
+                log.info("PERFORMING LOG EXPORT");
+                placeHolder.text.setText("System logs have been exported.");
+            }
+            case BEGIN_VOTE_COUNTING -> {
+                votingSystem.setStatus(Status.VOTE_COUNTING);
+                placeHolder.text.setText("Vote tabulation complete, the vote window has been ended");
+            }
+            case END_VOTE_PROCESS -> {
+                votingSystem.setStatus(Status.POST_ELECTION);
+                placeHolder.text.setText("The configured ballot and have been ended");
+            }
+        }
+        placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build()));
+        clearAndPush(placeHolder);
     }
 }
