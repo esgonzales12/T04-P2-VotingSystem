@@ -1,4 +1,4 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.common;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.Background;

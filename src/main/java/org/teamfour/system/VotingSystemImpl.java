@@ -11,6 +11,7 @@ import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.data.SystemRequest;
 import org.teamfour.system.data.SystemResponse;
 import org.teamfour.system.enums.Status;
+import org.teamfour.system.enums.SystemResponseType;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -39,7 +40,7 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
             case OPERATION -> {
                 return SystemResponse
                         .builder()
-                        .type(ResponseType.SUCCESS)
+                        .type(SystemResponseType.SUCCESS)
                         .build();
             }
             case VOTE_FINALIZE -> {

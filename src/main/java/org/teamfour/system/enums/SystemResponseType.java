@@ -1,6 +1,6 @@
 package org.teamfour.system.enums;
 
-public enum ResponseType {
+public enum SystemResponseType {
     SUCCESS,
     FAILURE
 }

@@ -14,7 +14,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import org.teamfour.dao.VotingDao;
-import org.teamfour.display.components.VoterLogin;
+import org.teamfour.display.components.voting.VoterLogin;
 import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.voting.CandidateCard;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
@@ -40,18 +40,8 @@ public class Gui extends Application {
         private Status status = Status.PRE_ELECTION;
 
         @Override
-        public Status getStatus() {
-            return status;
-        }
-
-        @Override
         public Ballot getBallot() {
             return ballot == null? getBallot() : ballot;
-        }
-
-        @Override
-        public void setStatus(Status status) {
-            this.status = status;
         }
 
         @Override

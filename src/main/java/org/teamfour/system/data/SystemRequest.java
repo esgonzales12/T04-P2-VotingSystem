@@ -1,22 +1,28 @@
 package org.teamfour.system.data;
 
+import org.teamfour.model.db.Vote;
 import org.teamfour.system.enums.Operation;
-import org.teamfour.system.enums.RequestType;
+import org.teamfour.system.enums.SystemRequestType;
+
+import java.util.List;
 
 public class SystemRequest {
-    private final RequestType type;
+    private final SystemRequestType type;
 
     private final Operation operation;
     private final String adminUsername;
     private final String adminPassword;
+    private final List<Vote> votes;
+
     public SystemRequest(Builder builder) {
         this.operation = builder.operation;
         this.adminUsername = builder.adminUsername;
         this.adminPassword = builder.adminPassword;
         this.type = builder.type;
+        this.votes = builder.votes;
     }
 
-    public RequestType getType() {
+    public SystemRequestType getType() {
         return type;
     }
 
@@ -46,7 +52,9 @@ public class SystemRequest {
         private Operation operation;
         private String adminUsername;
         private String adminPassword;
-        private RequestType type;
+        private SystemRequestType type;
+        private List<Vote> votes;
+
 
         public Builder withOperation(Operation operation) {
             this.operation = operation;
@@ -63,8 +71,13 @@ public class SystemRequest {
             return this;
         }
 
-        public Builder withType(RequestType type) {
+        public Builder withType(SystemRequestType type) {
             this.type = type;
+            return this;
+        }
+
+        public Builder withVotes(List<Vote> votes) {
+            this.votes = votes;
             return this;
         }
 

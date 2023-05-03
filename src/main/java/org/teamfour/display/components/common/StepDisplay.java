@@ -1,4 +1,4 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.common;
 
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;

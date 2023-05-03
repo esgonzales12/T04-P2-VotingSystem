@@ -7,6 +7,7 @@ import org.teamfour.model.bsl.Ballot;
 import org.teamfour.registry.dao.RegistryDao;
 import org.teamfour.registry.data.RegisteredVoter;
 import org.teamfour.registry.data.Registry;
+import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
 
 import java.io.*;
@@ -23,7 +24,21 @@ public class Main {
     private static final String[] ADDRESSES = {"123 Main St", "456 Oak Ave", "789 Maple Rd", "1011 Elm Blvd", "1213 Cedar Ln", "1415 Pine Dr", "1617 Birch Rd", "1819 Ash Ave", "2021 Walnut St", "2223 Chestnut Blvd"};
 
 
+    private static Metadata fetchSystemData() {
+        try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.META))) {
+            // TODO: service.saveBallot(ballot);
+            return new Gson().fromJson(br, Metadata.class);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("UNABLE TO READ SYSTEM METADATA");
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
+        Metadata metadata = fetchSystemData();
+        System.out.println(metadata.toString());
+        System.exit(0);
         RegistryDao dao = new RegistryDao();
         System.out.println(SystemFiles.REGISTRY_DB_PATH);
         for (int i = 0; i < NAMES.length; i++) {

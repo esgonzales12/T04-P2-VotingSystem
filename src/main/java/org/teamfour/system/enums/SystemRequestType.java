@@ -1,6 +1,6 @@
 package org.teamfour.system.enums;
 
-public enum RequestType {
+public enum SystemRequestType {
     OPERATION,
     VOTE_FINALIZE,
     CAST_VOTE,

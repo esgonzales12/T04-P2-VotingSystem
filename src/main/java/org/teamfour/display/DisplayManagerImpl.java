@@ -1,14 +1,14 @@
 package org.teamfour.display;
 
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.scene.Node;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import org.teamfour.display.components.IdleScreen;
-import org.teamfour.display.components.LoadingScreen;
-import org.teamfour.display.components.StepDisplay;
-import org.teamfour.display.components.VoterLogin;
+import org.teamfour.display.components.common.IdleScreen;
+import org.teamfour.display.components.common.LoadingScreen;
+import org.teamfour.display.components.voting.VoterLogin;
 import org.teamfour.display.components.admin.AdminMenu;
 import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
@@ -18,9 +18,12 @@ import org.teamfour.display.enums.Notification;
 import org.teamfour.display.enums.RequestType;
 import org.teamfour.display.enums.ResponseType;
 import org.teamfour.display.util.AllowedOperations;
+import org.teamfour.display.util.OperationPrompts;
 import org.teamfour.display.util.PlaceHolder;
 import org.teamfour.model.db.Ballot;
 import org.teamfour.system.VotingSystem;
+import org.teamfour.system.data.SystemRequest;
+import org.teamfour.system.data.SystemResponse;
 import org.teamfour.system.enums.Operation;
 import org.teamfour.system.enums.Status;
 
@@ -30,10 +33,12 @@ import java.util.Deque;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.teamfour.system.enums.SystemRequestType;
+import org.teamfour.system.enums.SystemResponseType;
+
 public class DisplayManagerImpl extends StackPane implements DisplayManager {
     private final Logger log;
     private final Deque<Node> displayStack;
-    private final Deque<StepDisplay> adminStack;
     private final VotingSystem votingSystem;
     private final AtomicBoolean doorClosed;
     private final AtomicBoolean deviceConnected;
@@ -47,7 +52,6 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         this.deviceConnected = new AtomicBoolean(false);
         this.ballot = null;
         init();
-        adminStack = new ArrayDeque<>();
     }
 
     private void init() {
@@ -61,28 +65,22 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
     public ResolutionResponse resolve(ResolutionRequest request) {
         log.info("RESOLUTION REQUEST RECEIVED: " + request.getType());
         switch (request.getType()) {
-            case FINALIZE -> {
-                // TODO: ONLY SEND FINALIZE REQUEST, NO RETURN NEEDED
-            }
-            case CAST_VOTE -> {
-                // TODO: SEND VOTE CASTING REQUEST, NO RETURN NEEDED
-                PlaceHolder placeHolder = new PlaceHolder();
-                placeHolder.text.setText("Your vote has been recorded.");
-                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoterLogin(this)));
-                clearAndPush(placeHolder);
-            }
+            case FINALIZE -> votingSystem.handleRequest(new SystemRequest.Builder()
+                                    .withType(SystemRequestType.VOTE_FINALIZE)
+                                    .withVotes(request.getVotes())
+                                    .build());
+            case CAST_VOTE -> handleVoteCast(request);
             case VOTER_EXIT -> clearAndPush(new VoterLogin(this));
-            case VOTER_LOGIN -> {
-                // TODO: REQUEST LOGIN FROM VOTING SYSTEM, ASSUME SUCCESS
-                if (ballot == null) {
-                    ballot = votingSystem.getBallot();
-                }
-                clearAndPush(new VoteCastingDisplay(ballot, this));
-                return new ResolutionResponse(ResponseType.SUCCESS);
-            }
+            case VOTER_LOGIN -> handleVoterLogin(request);
             case ADMIN_LOGIN -> {
-                // TODO: SEND REQUEST TO VOTING SYSTEM FOR ADMIN SIGN IN
-                return new ResolutionResponse(ResponseType.SUCCESS);
+                SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                                .withType(SystemRequestType.ADMIN_LOGIN)
+                                .withAdminUsername(request.getAdminUsername())
+                                .withAdminPassword(request.getAdminPassword())
+                                .build());
+                ResponseType success = response.getResponseType() == SystemResponseType.FAILURE ?
+                        ResponseType.FAILURE : ResponseType.SUCCESS;
+                return new ResolutionResponse(success);
             }
             case ADMIN_LOGIN_COMPLETE -> {
                 LoadingScreen loadingScreen = new LoadingScreen();
@@ -102,16 +100,50 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
             }
             case OPERATION_EXIT -> {
                 AdminMenu adminMenu = new AdminMenu(this,
-                        AllowedOperations.ALLOWED_OPERATIONS.get(votingSystem.getStatus()));
+                        AllowedOperations.ALLOWED_OPERATIONS.get(systemStatus()));
                 clearAndPush(adminMenu);
             }
         }
         return null;
     }
 
+    private void handleVoteCast(ResolutionRequest request) {
+        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                .withType(SystemRequestType.CAST_VOTE)
+                .withVotes(request.getVotes())
+                .build());
+        Platform.runLater(() -> {
+            PlaceHolder placeHolder = new PlaceHolder();
+            placeHolder.text.setText(response.getResponseType() == SystemResponseType.FAILURE ?
+                    "An error occurred while recording your vote. Please speak to a polling official."
+                        : "Your vote has been recorded.");
+            placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoterLogin(this)));
+            clearAndPush(placeHolder);
+        });
+    }
+
+    private void handleVoterLogin(ResolutionRequest request) {
+        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                        .withType(SystemRequestType.ADMIN_LOGIN)
+                        .withAdminUsername(request.getAdminUsername())
+                        .withAdminPassword(request.getAdminPassword())
+                        .build());
+        if (ballot == null) {
+            ballot = votingSystem.getBallot();
+        }
+        Platform.runLater(() -> {
+            if (response.getResponseType() == SystemResponseType.FAILURE) {
+                PlaceHolder placeHolder = new PlaceHolder();
+                placeHolder.text.setText("Unable to perform login, please try again or speak to a polling official.");
+                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoteCastingDisplay(ballot, this)));
+                clearAndPush(placeHolder);
+            }
+            clearAndPush(new VoteCastingDisplay(ballot, this));
+        });
+    }
+
     @Override
     public void dispatchOperation(Operation operation) {
-        adminStack.clear();
         log.info("DISPATCHING: " + operation);
         if (operation == Operation.BEGIN_VOTE_COUNTING) {
             ballot = null;
@@ -125,7 +157,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         switch (notification) {
             case DOOR_OPEN -> {
                 doorClosed.set(false);
-                Status status = votingSystem.getStatus();
+                Status status = systemStatus();
                 if (status == Status.IN_PROCESS) {
                     // TODO: LOCKOUT SCREEN
                 }
@@ -133,23 +165,23 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
             case STARTUP_COMPLETE -> {
                 PlaceHolder placeHolder = new PlaceHolder();
                 placeHolder.text.setText("System Startup Complete :)");
-                placeHolder.exit.setOnMouseClicked(exit -> statusDispatch(votingSystem.getStatus()));
+                placeHolder.exit.setOnMouseClicked(exit -> statusDispatch(systemStatus()));
                 clearAndPush(placeHolder);
             }
             case DOOR_CLOSE -> {
                 doorClosed.set(true);
-                statusDispatch(votingSystem.getStatus());
+                statusDispatch(systemStatus());
             }
             case DEVICE_CONNECT -> {
                 deviceConnected.set(true);
                 AdminMenu adminMenu = new AdminMenu(this,
-                        AllowedOperations.ALLOWED_OPERATIONS.get(votingSystem.getStatus()));
+                        AllowedOperations.ALLOWED_OPERATIONS.get(systemStatus()));
                 clearAndPush(adminMenu);
             }
             case DEVICE_DISCONNECT -> {
                 getChildren().clear();
                 deviceConnected.set(false);
-                statusDispatch(votingSystem.getStatus());
+                statusDispatch(systemStatus());
             }
         }
     }
@@ -180,33 +212,25 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
 
     private void performOperation(Operation operation) {
         PlaceHolder placeHolder = new PlaceHolder();
-        switch (operation) {
-            case BEGIN_VOTING_WINDOW -> {
-                votingSystem.setStatus(Status.IN_PROCESS);
-                placeHolder.text.setText("Voting window has been started");
-            }
-            case CONFIGURATION -> {
-                votingSystem.setStatus(Status.PRE_ELECTION);
-                placeHolder.text.setText("Configuration Complete, (display ballot format)");
-            }
-            case VOTE_COUNT_EXPORT -> {
-                log.info("PERFORMING VOTE EXPORT");
-                placeHolder.text.setText("Vote tabulation results have been exported");
-            }
-            case SYSTEM_LOG_EXPORT -> {
-                log.info("PERFORMING LOG EXPORT");
-                placeHolder.text.setText("System logs have been exported.");
-            }
-            case BEGIN_VOTE_COUNTING -> {
-                votingSystem.setStatus(Status.VOTE_COUNTING);
-                placeHolder.text.setText("Vote tabulation complete, the vote window has been ended");
-            }
-            case END_VOTE_PROCESS -> {
-                votingSystem.setStatus(Status.POST_ELECTION);
-                placeHolder.text.setText("The configured ballot and have been ended");
-            }
+        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                        .withType(SystemRequestType.OPERATION)
+                        .withOperation(operation)
+                        .build());
+        if (response.getResponseType() == SystemResponseType.FAILURE) {
+            placeHolder.text.setText("Unable to complete operation " + operation + " at this time.");
+            placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder()
+                    .withType(RequestType.OPERATION_EXIT)
+                    .build()));
+        } else {
+            placeHolder.text.setText(OperationPrompts.COMPLETION_PROMPTS.get(operation));
+            placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder()
+                    .withType(RequestType.OPERATION_EXIT)
+                    .build()));
         }
-        placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build()));
-        clearAndPush(placeHolder);
+        Platform.runLater(() -> clearAndPush(placeHolder));
+    }
+
+    private Status systemStatus() {
+        return votingSystem.getSystemMetadata().getStatus();
     }
 }
