@@ -27,7 +27,6 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
         service.setVotesCounted(false);
     }
 
-
     @Override
     public SystemResponse handleRequest(SystemRequest request) {
         switch (request.getType()) {

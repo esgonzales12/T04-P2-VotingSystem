@@ -52,7 +52,6 @@ public class VotingService implements VotingSystem{
 
     public void saveVoteResults(Map<String, Integer> candidateVotes, int totalVotes) {
     }
-
     public void markAllUsersExpired() {
     }
 

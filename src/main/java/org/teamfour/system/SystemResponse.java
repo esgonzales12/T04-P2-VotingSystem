@@ -10,7 +10,6 @@ public class SystemResponse {
     public RequestType getResponseType() {
         return requestType;
     }
-
     @Override
     public String toString() {
         return "SystemResponse{" +
