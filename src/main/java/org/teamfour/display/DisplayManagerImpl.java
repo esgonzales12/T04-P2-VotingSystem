@@ -2,12 +2,15 @@ package org.teamfour.display;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import org.teamfour.display.components.common.IdleScreen;
 import org.teamfour.display.components.common.LoadingScreen;
+import org.teamfour.display.components.voting.SampleVoteCastingDisplay;
 import org.teamfour.display.components.voting.VoterLogin;
 import org.teamfour.display.components.admin.AdminMenu;
 import org.teamfour.display.components.admin.DualLoginPage;
@@ -223,9 +226,10 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                     .build()));
         } else {
             placeHolder.text.setText(OperationPrompts.COMPLETION_PROMPTS.get(operation));
-            placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder()
-                    .withType(RequestType.OPERATION_EXIT)
-                    .build()));
+            EventHandler<MouseEvent> continueHandler = operation == Operation.CONFIGURATION ?
+                    exit -> clearAndPush(new SampleVoteCastingDisplay(ballot, this))
+                        : exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build());
+            placeHolder.exit.setOnMouseClicked(continueHandler);
         }
         Platform.runLater(() -> clearAndPush(placeHolder));
     }

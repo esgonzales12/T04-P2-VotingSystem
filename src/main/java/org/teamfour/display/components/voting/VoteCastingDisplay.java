@@ -13,11 +13,11 @@ import org.teamfour.model.db.Vote;
 import java.util.List;
 
 public class VoteCastingDisplay extends StackPane {
-    private final DisplayManager displayManager;
-    private final Ballot ballot;
-    private final LoadingScreen loadingScreen;
-    private BallotFinalizeDisplay finalizeDisplay;
-    private ItemPaginatedDisplay itemPages;
+    protected final DisplayManager displayManager;
+    protected final Ballot ballot;
+    protected final LoadingScreen loadingScreen;
+    protected BallotFinalizeDisplay finalizeDisplay;
+    protected ItemPaginatedDisplay itemPages;
 
     public VoteCastingDisplay(Ballot ballot, DisplayManager displayManager) {
         this.ballot = ballot;
@@ -39,7 +39,7 @@ public class VoteCastingDisplay extends StackPane {
         getChildren().addAll(itemPages, finalizeDisplay, loadingScreen);
     }
 
-    private EventHandler<MouseEvent> finalizeHandler() {
+    protected EventHandler<MouseEvent> finalizeHandler() {
         return finalizeSelected -> {
             List<Vote> votes = itemPages.getItemVotes();
             if (displayManager != null) {
@@ -51,6 +51,17 @@ public class VoteCastingDisplay extends StackPane {
             }
             finalizeDisplay.render(ballot, votes);
             finalizeDisplay.setVisible(true);
+        };
+    }
+
+    protected EventHandler<MouseEvent> castVoteSelected() {
+        return castVoteSelected -> {
+            loadingScreen.setVisible(true);
+            displayManager
+                    .resolve(new ResolutionRequest.Builder()
+                            .withVotes(itemPages.getItemVotes())
+                            .withType(RequestType.CAST_VOTE)
+                            .build());
         };
     }
 
@@ -66,17 +77,6 @@ public class VoteCastingDisplay extends StackPane {
 
     private EventHandler<MouseEvent> goBackSelected() {
         return goBack -> finalizeDisplay.setVisible(false);
-    }
-
-    private EventHandler<MouseEvent> castVoteSelected() {
-        return castVoteSelected -> {
-            loadingScreen.setVisible(true);
-            displayManager
-                    .resolve(new ResolutionRequest.Builder()
-                            .withVotes(itemPages.getItemVotes())
-                            .withType(RequestType.CAST_VOTE)
-                            .build());
-        };
     }
 
 }
