@@ -20,6 +20,8 @@ import org.teamfour.display.components.voting.CandidateCard;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
 import org.teamfour.display.enums.Notification;
 import org.teamfour.model.db.Ballot;
+import org.teamfour.system.SystemRequest;
+import org.teamfour.system.SystemResponse;
 import org.teamfour.system.VotingSystem;
 import org.teamfour.system.enums.Status;
 
@@ -49,6 +51,11 @@ public class Gui extends Application {
         @Override
         public void setStatus(Status status) {
             this.status = status;
+        }
+
+        @Override
+        public SystemResponse handleRequest(SystemRequest request) {
+            return null;
         }
     };
 

@@ -6,7 +6,7 @@ public class Registry {
         VOTER_STATUS_UPDATED,
         ERROR,
         GET_VOTER_STATUS,
-        SET_VOTER_STATUS
+        MARK_VOTE_COUNTED
     }
 
     public static class VoteStatus {

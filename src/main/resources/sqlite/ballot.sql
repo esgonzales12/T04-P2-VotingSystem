@@ -28,7 +28,8 @@ CREATE TABLE option (
     itemId INTEGER,
     name TEXT,
     party TEXT,
-    choice TEXT
+    choice TEXT,
+    count INTEGER
 );
 
 
