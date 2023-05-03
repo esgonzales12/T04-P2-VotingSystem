@@ -44,6 +44,18 @@ public class SystemFiles {
             .withExtension("")
             .build();
 
+    public static final String REGISTRY_DB_PATH = new PathBuilder(File.separator)
+            .withExtension(new PathBuilder(File.pathSeparator)
+                    .withExtension("jdbc")
+                    .withExtension("sqlite")
+                    .withExtension("")
+                    .build())
+            .withExtension(System.getProperty(USER_DIR))
+            .withExtension(SYSTEM_DIR)
+            .withExtension("registry")
+            .withExtension("")
+            .build();
+
     private static class PathBuilder {
         private String path;
         private final String delim;

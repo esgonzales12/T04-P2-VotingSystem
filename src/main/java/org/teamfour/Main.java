@@ -9,6 +9,9 @@ import org.teamfour.model.bsl.Ballot;
 import org.teamfour.registry.dao.RegistryDao;
 import org.teamfour.registry.data.RegisteredVoter;
 import org.teamfour.registry.data.Registry;
+import org.teamfour.system.SystemFiles;
+import org.teamfour.system.SystemRequest;
+import org.teamfour.system.SystemResponse;
 
 import java.io.*;
 import java.lang.annotation.Annotation;
@@ -23,28 +26,22 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
+    private static final String[] NAMES = {"Emily Garcia", "Julian Patel", "Hannah Nguyen", "Owen Lee", "Eva Kim", "Isabella Chen", "Aiden Smith", "Avery Taylor", "Mason Wong", "Sophia Rodriguez"};
+    private static final String[] ADDRESSES = {"123 Main St", "456 Oak Ave", "789 Maple Rd", "1011 Elm Blvd", "1213 Cedar Ln", "1415 Pine Dr", "1617 Birch Rd", "1819 Ash Ave", "2021 Walnut St", "2223 Chestnut Blvd"};
+
 
     public static void main(String[] args) {
-
-        String name = "John Doe III";
-        String address = "1909 Wilkins ln NW";
-        String demoHash = hash(name + address);
-//        RegisteredVoter voter = new RegisteredVoter.Builder()
-//                .setName(name)
-//                .setAddress(address)
-//                .setDemographicHash(demoHash)
-//                .setVoteStatus(Registry.VoteStatus.NOT_VOTED)
-//                .createRegisteredVoter();
-
         RegistryDao dao = new RegistryDao();
-//        RegisteredVoter voter1 = dao.create(voter);
-//        System.out.println("Saved: ");
-//        System.out.println(voter1.toString());
-
-        Optional<RegisteredVoter> voter2 = dao.find(demoHash);
-        System.out.println("Fetched: ");
-        System.out.println(voter2.isPresent());
-        voter2.ifPresent(System.out::println);
+        System.out.println(SystemFiles.REGISTRY_DB_PATH);
+        for (int i = 0; i < NAMES.length; i++) {
+            RegisteredVoter voter = new RegisteredVoter.Builder()
+                .setName(NAMES[i])
+                .setAddress(ADDRESSES[i])
+                .setDemographicHash(hash(NAMES[i] + ADDRESSES[i]).substring(0, 6).toUpperCase())
+                .setVoteStatus(Registry.VoteStatus.NOT_VOTED)
+                .createRegisteredVoter();
+            dao.create(voter);
+        }
 
         List<RegisteredVoter> voterList = dao.getVoters();
         voterList.forEach(System.out::println);
