@@ -95,4 +95,10 @@ public class Vote {
                 ", finalized=" + finalized +
                 '}';
     }
+
+    public String getCandidateId() {
+        return null;
+    }
+
+
 }

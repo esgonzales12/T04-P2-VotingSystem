@@ -152,3 +152,4 @@
 2023-01-30 18:01:43.741 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
 2023-01-30 18:01:44.111 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
 2023-01-30 18:01:47.928 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-30-03 13:30:37.708 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - UNABLE TO OPEN CONNECTION

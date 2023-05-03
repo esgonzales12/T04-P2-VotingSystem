@@ -23,6 +23,7 @@ import org.teamfour.model.db.Ballot;
 import org.teamfour.system.SystemRequest;
 import org.teamfour.system.SystemResponse;
 import org.teamfour.system.VotingSystem;
+import org.teamfour.system.data.Metadata;
 import org.teamfour.system.enums.Status;
 
 import java.io.BufferedReader;
@@ -57,6 +58,8 @@ public class Gui extends Application {
         public SystemResponse handleRequest(SystemRequest request) {
             return null;
         }
+
+
     };
 
     private Integer fontSize = 17;
