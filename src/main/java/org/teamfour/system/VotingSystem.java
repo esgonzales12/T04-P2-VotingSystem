@@ -10,5 +10,7 @@ public interface VotingSystem {
 
     void setStatus(Status status);
 
+    SystemResponse handleRequest(SystemRequest request);
+
 
 }

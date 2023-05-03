@@ -1,16 +1,23 @@
 package org.teamfour.system;
 
 import org.teamfour.system.enums.Operation;
+import org.teamfour.system.enums.RequestType;
 
 public class SystemRequest {
+    private final RequestType type;
+
     private final Operation operation;
     private final String adminUsername;
     private final String adminPassword;
-
     public SystemRequest(Builder builder) {
         this.operation = builder.operation;
         this.adminUsername = builder.adminUsername;
         this.adminPassword = builder.adminPassword;
+        this.type = builder.type;
+    }
+
+    public RequestType getType() {
+        return type;
     }
 
     public Operation getOperation() {
@@ -36,6 +43,7 @@ public class SystemRequest {
         private Operation operation;
         private String adminUsername;
         private String adminPassword;
+        private RequestType type;
 
         public Builder withOperation(Operation operation) {
             this.operation = operation;
@@ -49,6 +57,11 @@ public class SystemRequest {
 
         public Builder withAdminPassword(String password) {
             this.adminPassword = password;
+            return this;
+        }
+
+        public Builder withType(RequestType type) {
+            this.type = type;
             return this;
         }
 
