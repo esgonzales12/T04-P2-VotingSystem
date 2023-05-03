@@ -1,14 +1,18 @@
 package org.teamfour.registry.data;
 
-public class RegistryMessage {
+import java.io.Serializable;
+
+public class RegistryMessage implements Serializable {
     private final Registry.MessageType type;
     private final String voterAccessCode;
     private final String message;
+    private final String voterStatus;
 
     public RegistryMessage(Builder builder) {
         this.type = builder.type;
         this.voterAccessCode = builder.voterAccessCode;
         this.message = builder.message;
+        this.voterStatus = builder.voterStatus;
     }
 
     public String getVoterAccessCode() {
@@ -23,12 +27,27 @@ public class RegistryMessage {
         return message;
     }
 
-    public static class Builder {
-               private Registry.MessageType type;
-            private String voterAccessCode;
-            private String message;
+    public String getVoterStatus() {
+        return voterStatus;
+    }
 
-            public Builder setType(Registry.MessageType type) {
+    @Override
+    public String toString() {
+        return "RegistryMessage{" +
+                "type=" + type +
+                ", voterAccessCode='" + voterAccessCode + '\'' +
+                ", message='" + message + '\'' +
+                ", voterStatus='" + voterStatus + '\'' +
+                '}';
+    }
+
+    public static class Builder {
+        private Registry.MessageType type;
+        private String voterAccessCode;
+        private String message;
+        private String voterStatus;
+
+        public Builder setType(Registry.MessageType type) {
                 this.type = type;
                 return this;
             }
@@ -43,8 +62,13 @@ public class RegistryMessage {
                 return this;
             }
 
-            public RegistryMessage build() {
-                return new RegistryMessage(this);
+            public Builder setVoterStatus(String status) {
+                this.voterStatus = status;
+                return this;
             }
+
+            public RegistryMessage build() {
+                    return new RegistryMessage(this);
+                }
     }
 }

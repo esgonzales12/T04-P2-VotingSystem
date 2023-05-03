@@ -29,4 +29,9 @@ public class VotingService implements VotingSystem{
     public void setStatus(Status statusIn) {
         status = statusIn;
     }
+
+    @Override
+    public SystemResponse handleRequest(SystemRequest request) {
+        return null;
+    }
 }

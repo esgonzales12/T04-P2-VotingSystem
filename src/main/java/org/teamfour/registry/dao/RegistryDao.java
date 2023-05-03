@@ -15,9 +15,7 @@ public class RegistryDao extends DaoBase {
     private final String DB_FILE = "registeredVoters.db";
     private final String TABLE_NAME = "registeredVoter";
 
-    public RegistryDao() {
-        System.out.println("jdbc:sqlite:/" + getClass().getResource("/registry/").getPath() + DB_FILE);
-    }
+    public RegistryDao() {}
 
     @Override
     public Connection getConnection() {
