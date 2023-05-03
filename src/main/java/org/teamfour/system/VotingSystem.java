@@ -14,6 +14,8 @@ public interface VotingSystem {
 
     void setStatus(Status status);
 
+    Metadata getSystemMetadata();
+
     SystemResponse handleRequest(SystemRequest request);
 
 

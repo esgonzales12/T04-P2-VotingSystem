@@ -1,19 +1,21 @@
 package org.teamfour.system;
 
-import org.teamfour.display.enums.RequestType;
+import lombok.Builder;
+import org.teamfour.display.enums.ResponseType;
 
+@Builder
 public class SystemResponse {
-    private final RequestType requestType;
-    public SystemResponse(RequestType responseType) {
-        this.requestType = responseType;
+    private final ResponseType type;
+    public SystemResponse(ResponseType responseType) {
+        this.type = responseType;
     }
-    public RequestType getResponseType() {
-        return requestType;
+    public ResponseType getResponseType() {
+        return type;
     }
     @Override
     public String toString() {
         return "SystemResponse{" +
-                "responseType=" + requestType +
+                "responseType=" + type +
                 '}';
     }
 }

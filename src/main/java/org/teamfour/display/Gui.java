@@ -55,6 +55,11 @@ public class Gui extends Application {
         }
 
         @Override
+        public Metadata getSystemMetadata() {
+            return null;
+        }
+
+        @Override
         public SystemResponse handleRequest(SystemRequest request) {
             return null;
         }

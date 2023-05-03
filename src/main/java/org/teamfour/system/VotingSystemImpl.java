@@ -1,15 +1,15 @@
 package org.teamfour.system;
 
 import com.google.gson.Gson;
+import org.teamfour.display.enums.ResponseType;
 import org.teamfour.logging.LogBase;
 import org.teamfour.model.bsl.Ballot;
 import org.teamfour.model.db.Vote;
 import org.teamfour.system.data.Metadata;
 import org.teamfour.system.enums.Status;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,11 +17,13 @@ import java.util.Map;
 public class VotingSystemImpl extends LogBase implements VotingSystem {
 
     private Status status;
+    private final Metadata systemMetadata;
     public VotingSystemImpl(String logIdentifier) {
-
         super(VotingSystemImpl.class.getName());
+        this.systemMetadata = fetchSystemData();
     }
     public void startVoteWindow() {
+
         status = Status.IN_PROCESS;
         VotingService service = new VotingService();
         service.setVotesCounted(false);
@@ -31,11 +33,19 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
     public SystemResponse handleRequest(SystemRequest request) {
         switch (request.getType()) {
             case OPERATION -> {
+                return SystemResponse
+                        .builder()
+                        .type(ResponseType.SUCCESS)
+                        .build();
             }
             case VOTE_FINALIZE -> {
             }
             case CAST_VOTE -> {
 
+            }
+            case VOTER_LOGIN -> {
+            }
+            case ADMIN_LOGIN -> {
             }
         }
         return null;
@@ -59,16 +69,9 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
         status = Status.PRE_ELECTION;
     }
 
-    private Metadata getSystemMetadata() {
-        try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.META))) {
-            VotingService service = new VotingService();
-            Metadata data = new Gson().fromJson(br, Metadata.class);
-            // TODO: service.saveBallot(ballot);
-            return data;
-        } catch (Exception e) {
-            log.error("Error getting system metadata", e);
-        }
-        return null;
+    @Override
+    public Metadata getSystemMetadata() {
+        return systemMetadata;
     }
     public void endVoteProcess() {
         status = Status.POST_ELECTION;
@@ -117,6 +120,26 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
     @Override
     public void setStatus(Status status) {
 
+    }
+
+    private Metadata fetchSystemData() {
+        try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.META))) {
+            // TODO: service.saveBallot(ballot);
+            return new Gson().fromJson(br, Metadata.class);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            log.error("UNABLE TO READ SYSTEM METADATA");
+        }
+        return null;
+    }
+
+    private void updateSystemData() {
+        try {
+            FileOutputStream outputStream = new FileOutputStream(SystemFiles.META, false);
+            outputStream.write(new Gson().toJson(systemMetadata).getBytes());
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
     }
 
 

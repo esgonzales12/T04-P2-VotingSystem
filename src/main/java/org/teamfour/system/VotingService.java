@@ -37,6 +37,11 @@ public class VotingService implements VotingSystem{
     }
 
     @Override
+    public Metadata getSystemMetadata() {
+        return null;
+    }
+
+    @Override
     public SystemResponse handleRequest(SystemRequest request) {
         return null;
     }
