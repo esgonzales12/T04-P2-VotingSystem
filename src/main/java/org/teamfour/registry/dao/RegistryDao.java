@@ -21,7 +21,7 @@ public class RegistryDao extends DaoBase {
     public Connection getConnection() {
         try {
             Class.forName("org.sqlite.JDBC");
-            return DriverManager.getConnection("jdbc:sqlite:/" + getClass().getResource("/registry/").getPath() + DB_FILE);
+            return DriverManager.getConnection(SystemFiles.REGISTRY_DB_PATH + DB_FILE);
         } catch (SQLException e) {
             log.error("UNABLE TO OPEN CONNECTION");
             throw new RuntimeException(e);
@@ -61,7 +61,6 @@ public class RegistryDao extends DaoBase {
                 VALUES ('%s', '%s', '%s', '%s');
                 """, registeredVoter.getDemographicHash(), registeredVoter.getName(),
                 registeredVoter.getAddress(), registeredVoter.getVoteStatus());
-        System.out.println(sql);
         return create(RegisteredVoter.class, sql);
     }
 
