@@ -33,7 +33,7 @@ public class SystemFiles {
             .withExtension("cipher.json")
             .build();
     public static final String SQL_STORE_PATH = new PathBuilder(File.separator)
-            .withExtension(new PathBuilder(File.pathSeparator)
+            .withExtension(new PathBuilder(":")
                             .withExtension("jdbc")
                             .withExtension("sqlite")
                             .withExtension("")
@@ -45,7 +45,7 @@ public class SystemFiles {
             .build();
 
     public static final String REGISTRY_DB_PATH = new PathBuilder(File.separator)
-            .withExtension(new PathBuilder(File.pathSeparator)
+            .withExtension(new PathBuilder(":")
                     .withExtension("jdbc")
                     .withExtension("sqlite")
                     .withExtension("")
