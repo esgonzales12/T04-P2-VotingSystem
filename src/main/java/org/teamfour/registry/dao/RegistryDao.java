@@ -2,7 +2,7 @@ package org.teamfour.registry.dao;
 
 import org.teamfour.dao.DaoBase;
 import org.teamfour.registry.data.RegisteredVoter;
-import org.teamfour.system.SystemFiles;
+import org.teamfour.system.data.SystemFiles;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package org.teamfour.system;
+package org.teamfour.system.data;
 
 import lombok.Builder;
 import org.teamfour.display.enums.ResponseType;

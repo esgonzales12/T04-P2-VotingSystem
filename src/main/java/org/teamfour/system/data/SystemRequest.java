@@ -1,10 +1,7 @@
-package org.teamfour.system;
+package org.teamfour.system.data;
 
 import org.teamfour.system.enums.Operation;
 import org.teamfour.system.enums.RequestType;
-
-import java.lang.ref.Reference;
-import java.util.Map;
 
 public class SystemRequest {
     private final RequestType type;

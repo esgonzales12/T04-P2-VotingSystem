@@ -1,9 +1,11 @@
 package org.teamfour.system.data;
 
+import org.teamfour.system.enums.Status;
+
 public class Metadata {
       private final String version;
-      private String electionId;
-      private String status;
+      private Integer electionId;
+      private Status status;
       private String voterAccessCode;
       private boolean autoTestComplete;
       private boolean manualTestComplete;
@@ -17,11 +19,11 @@ public class Metadata {
         return version;
     }
 
-    public String getElectionId() {
+    public Integer getElectionId() {
         return electionId;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
@@ -41,11 +43,11 @@ public class Metadata {
         return tabulationComplete;
     }
 
-    public void setElectionId(String electionId) {
+    public void setElectionId(Integer electionId) {
         this.electionId = electionId;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

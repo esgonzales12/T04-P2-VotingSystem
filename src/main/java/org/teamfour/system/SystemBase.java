@@ -6,6 +6,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import org.teamfour.system.data.CipherData;
 import org.teamfour.system.data.Metadata;
+import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.enums.Authority;
 import org.teamfour.util.JsonUtil;
 

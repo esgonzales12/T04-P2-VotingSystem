@@ -1,23 +1,16 @@
 package org.teamfour.system;
 
 import org.teamfour.model.db.Ballot;
-import org.teamfour.model.db.Vote;
 import org.teamfour.system.data.Metadata;
-import org.teamfour.system.enums.Status;
-
-import java.util.List;
+import org.teamfour.system.data.SystemRequest;
+import org.teamfour.system.data.SystemResponse;
 
 public interface VotingSystem {
-    Status getStatus();
 
     Ballot getBallot();
-
-    void setStatus(Status status);
 
     Metadata getSystemMetadata();
 
     SystemResponse handleRequest(SystemRequest request);
-
-
 
 }

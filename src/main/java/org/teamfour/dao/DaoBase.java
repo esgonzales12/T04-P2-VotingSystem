@@ -4,7 +4,7 @@ import org.teamfour.dao.annotations.Column;
 import org.teamfour.dao.annotations.PrimaryKey;
 import org.teamfour.dao.annotations.Table;
 import org.teamfour.logging.StaticLogBase;
-import org.teamfour.system.SystemFiles;
+import org.teamfour.system.data.SystemFiles;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;

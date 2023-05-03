@@ -3,26 +3,19 @@ package org.teamfour;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.teamfour.dao.VotingDao;
-import org.teamfour.dao.annotations.PrimaryKey;
-import org.teamfour.dao.annotations.Table;
 import org.teamfour.model.bsl.Ballot;
 import org.teamfour.registry.dao.RegistryDao;
 import org.teamfour.registry.data.RegisteredVoter;
 import org.teamfour.registry.data.Registry;
-import org.teamfour.system.SystemFiles;
-import org.teamfour.system.SystemRequest;
-import org.teamfour.system.SystemResponse;
+import org.teamfour.system.data.SystemFiles;
 
 import java.io.*;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {

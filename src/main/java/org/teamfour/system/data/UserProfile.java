@@ -1,4 +1,4 @@
-package org.teamfour.system;
+package org.teamfour.system.data;
 import org.teamfour.system.enums.Authority;
 import java.util.HashMap;
 import java.util.Map;
