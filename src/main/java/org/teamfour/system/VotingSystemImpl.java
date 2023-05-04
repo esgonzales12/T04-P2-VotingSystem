@@ -49,27 +49,28 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
             case VOTE_FINALIZE -> {
                 votingService.countVotes(getBallot().getId());
                 return SystemResponse.builder()
-                        .type(ResponseType.SUCCESS)
+                        .type(SystemResponseType.SUCCESS)
                         .build();
             }
             case CAST_VOTE -> {
-                List<Vote> votes = request.getVotes();
-                boolean areVotesRecorded = votingService.recordVotes(votes);
-                ResponseType responseType = areVotesRecorded ? ResponseType.SUCCESS : ResponseType.FAILURE;
-                return SystemResponse.builder()
-                        .type(responseType)
-                        .build();
+
             }
 
 
 
 
             case VOTER_LOGIN -> {
-                boolean isAuthenticated = votingService.voterLogin(request.getAdminUsername());
-                ResponseType responseType = isAuthenticated ? ResponseType.SUCCESS : ResponseType.FAILURE;
-                return SystemResponse.builder()
-                        .type(responseType)
-                        .build();
+                String username = request.getAdminUsername();
+                String password = request.getAdminPassword();
+                if (votingService.voterLogin("")) {
+                    return SystemResponse.builder()
+                            .type(SystemResponseType.SUCCESS)
+                            .build();
+                } else {
+                    return SystemResponse.builder()
+                            .type(SystemResponseType.FAILURE)
+                            .build();
+                }
             }
 
         }
