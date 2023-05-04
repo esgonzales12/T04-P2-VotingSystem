@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.apache.commons.io.FileUtils;
 import org.teamfour.model.bsl.Ballot;
+import org.teamfour.registry.client.DemoFacadeImpl;
 import org.teamfour.service.VotingService;
 import org.teamfour.service.VotingServiceImpl;
 import org.teamfour.system.data.*;
@@ -24,10 +25,12 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
 
     private final Metadata systemMetadata;
     private final VotingService votingService;
-    public VotingSystemImpl(String logIdentifier) {
+
+    public VotingSystemImpl(String logIdentifier) throws IOException {
         this.systemMetadata = fetchSystemData();
-        this.votingService = new VotingServiceImpl(null);
+        this.votingService = new VotingServiceImpl(new DemoFacadeImpl());
     }
+
     @Override
     public SystemResponse handleRequest(SystemRequest request) {
         switch (request.getType()) {

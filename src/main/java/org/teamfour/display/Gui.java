@@ -54,6 +54,11 @@ public class Gui extends Application {
             return null;
         }
 
+        @Override
+        public boolean validDeviceConnected() {
+            return false;
+        }
+
 
     };
 

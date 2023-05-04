@@ -2,15 +2,12 @@ package org.teamfour.service;
 
 import org.teamfour.dao.VotingDao;
 import org.teamfour.model.db.*;
-import org.teamfour.registry.RequestHandler;
 import org.teamfour.registry.client.RegistryFacade;
 import org.teamfour.registry.data.Registry;
 import org.teamfour.registry.data.RegistryMessage;
 
 import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.Objects;
 
 public class VotingServiceImpl implements VotingService{
     VotingDao votingDao = new VotingDao();

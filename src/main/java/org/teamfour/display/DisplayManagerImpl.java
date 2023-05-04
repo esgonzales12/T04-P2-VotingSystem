@@ -46,6 +46,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
     private final AtomicBoolean doorClosed;
     private final AtomicBoolean deviceConnected;
     private Ballot ballot;
+    private String currentVoterCode;
 
     public DisplayManagerImpl(VotingSystem votingSystem) {
         this.log = LogManager.getLogger(DisplayManagerImpl.class.getName());
@@ -54,6 +55,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         this.doorClosed = new AtomicBoolean(false);
         this.deviceConnected = new AtomicBoolean(false);
         this.ballot = null;
+        this.currentVoterCode = null;
         init();
     }
 
@@ -151,6 +153,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
                 .withType(SystemRequestType.CAST_VOTE)
                 .withVotes(request.getVotes())
+                .withVoterAccessCode(currentVoterCode == null ? "" : currentVoterCode)
                 .build());
         Platform.runLater(() -> {
             PlaceHolder placeHolder = new PlaceHolder();
@@ -164,9 +167,8 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
 
     private void handleVoterLogin(ResolutionRequest request) {
         SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
-                .withType(SystemRequestType.ADMIN_LOGIN)
-                .withAdminUsername(request.getAdminUsername())
-                .withAdminPassword(request.getAdminPassword())
+                .withType(SystemRequestType.VOTER_LOGIN)
+                .withVoterAccessCode(request.getVoterAccessCode())
                 .build());
         if (ballot == null) {
             ballot = votingSystem.getBallot();
@@ -177,8 +179,10 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                 placeHolder.text.setText("Unable to perform login, please try again or speak to a polling official.");
                 placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoteCastingDisplay(ballot, this)));
                 clearAndPush(placeHolder);
+            } else {
+                currentVoterCode = request.getVoterAccessCode();
+                clearAndPush(new VoteCastingDisplay(ballot, this));
             }
-            clearAndPush(new VoteCastingDisplay(ballot, this));
         });
     }
 

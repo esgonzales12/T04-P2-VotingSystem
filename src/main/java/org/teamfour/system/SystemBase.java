@@ -1,5 +1,6 @@
 package org.teamfour.system;
 
+import com.google.gson.Gson;
 import org.teamfour.logging.LogBase;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
@@ -12,6 +13,8 @@ import org.teamfour.util.JsonUtil;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,12 +22,10 @@ import java.util.Base64;
 
 public class SystemBase extends LogBase {
     private final CipherData cipherData;
-    private final Metadata metadata;
 
-    public SystemBase() {
+    public SystemBase() throws FileNotFoundException {
         super(SystemBase.class.getName());
-        cipherData = JsonUtil.getJsonObj(CipherData.class, SystemFiles.CIPHER);
-        metadata = JsonUtil.getJsonObj(Metadata.class, SystemFiles.META);
+        cipherData = new Gson().fromJson(new FileReader(SystemFiles.CIPHER), CipherData.class);
     }
     protected JWTVerifier verifier() {
         return  JWT.require(Algorithm.HMAC256(cipherData.getTokenSecret()))
