@@ -55,6 +55,16 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
             }
             case CAST_VOTE -> {
                 boolean recorded = votingService.recordVotes(request.getVotes(), getBallot().getId());
+                if (recorded) {
+                    // TODO: CALL VVPAT
+                    return SystemResponse.builder()
+                            .type(SystemResponseType.SUCCESS)
+                            .build();
+                } else {
+                    return SystemResponse.builder()
+                            .type(SystemResponseType.FAILURE)
+                            .build();
+                }
             }
 
 
@@ -137,6 +147,7 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
     public org.teamfour.model.db.Ballot getBallot() {
         if (systemMetadata.getElectionId() != null) {
             // TODO: votingService.getBallot(systemMetadata.getElectionId();
+            return votingService.findBallot(systemMetadata.getElectionId());
 
         }
         return null;
@@ -146,6 +157,7 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
     private Metadata fetchSystemData() {
         try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.META))) {
             // TODO: service.saveBallot(ballot);
+
             return new Gson().fromJson(br, Metadata.class);
         } catch (Exception e) {
             log.error(e.getMessage());
