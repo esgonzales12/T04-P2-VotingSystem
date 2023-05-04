@@ -1,9 +1,7 @@
 package org.teamfour.service;
 
 import org.teamfour.dao.VotingDao;
-import org.teamfour.model.db.Ballot;
-import org.teamfour.model.db.Option;
-import org.teamfour.model.db.Vote;
+import org.teamfour.model.db.*;
 import org.teamfour.registry.RequestHandler;
 import org.teamfour.registry.client.RegistryFacade;
 import org.teamfour.registry.data.Registry;
@@ -72,17 +70,37 @@ public class VotingServiceImpl implements VotingService{
 
     }
     public  Ballot findBallot(Integer id){
-        String sql = String.format(
+        String ballotSql = String.format(
                 """
                 SELECT * FROM BALLOT
                 WHERE id = %d;
                 """, id);
-        try {
-            return votingDao.selectOne(Ballot.class, sql).get();
-        } catch (NoSuchElementException e){
-            return null;
+        Ballot ballot = votingDao.selectOne(Ballot.class, ballotSql).get();
+        String sectionsql = String.format(
+                """
+                SELECT * FROM Section
+                WHERE section.ballotid = %d;
+                """, id);
+        ballot.getSections().addAll(votingDao.selectMany(Section.class, sectionsql));
+        String itemSql;
+        String optionSql;
+        for (Section section: ballot.getSections()) {
+            itemSql = String.format(
+                    """
+                    SELECT * FROM item
+                    WHERE item.sectionid = %d;
+                    """, section.getId());
+            section.getItems().addAll(votingDao.selectMany(Item.class, itemSql));
+            for (Item item: section.getItems()){
+                optionSql = String.format(
+                        """
+                        SELECT * FROM option
+                        WHERE option.itemid = %d;
+                        """, item.getId());
+                item.getOptions().addAll(votingDao.selectMany(Option.class, optionSql));
+            }
         }
-
+        return ballot;
     }
     public  void countVotes(Integer id){
 
