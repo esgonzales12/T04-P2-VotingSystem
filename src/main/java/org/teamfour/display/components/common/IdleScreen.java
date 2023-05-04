@@ -27,9 +27,10 @@ public class IdleScreen extends VBox {
         Text headerText = new Text("Voting System Idle\n\n");
         headerText.setFill(Color.WHITE);
         headerText.getStyleClass().setAll("h1");
+        String configStatus = status == Status.POST_ELECTION ? "No ballot configured" : "Ballot currently configured";
 
         Text systemStatus = new Text("System status: " + status + "\n\n"
-        + "System version: 1.0\n\n" + "Configuration Status: No ballot configured\n\n");
+        + "System version: 1.0\n\n" + "Configuration Status:" + configStatus + " \n\n");
         systemStatus.getStyleClass().setAll("h4", "code", "strong");
         systemStatus.setFill(Color.WHITE);
 

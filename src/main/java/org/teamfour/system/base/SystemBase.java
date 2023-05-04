@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.google.gson.Gson;
 import org.teamfour.logging.LogBase;
+import org.teamfour.system.VotingSystemImpl;
 import org.teamfour.system.data.CipherData;
 import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.enums.Authority;
@@ -22,7 +23,7 @@ public class SystemBase extends LogBase {
     private final CipherData cipherData;
 
     public SystemBase() throws FileNotFoundException {
-        super("VotingSystem");
+        super(VotingSystemImpl.class.getName());
         cipherData = new Gson().fromJson(new FileReader(SystemFiles.CIPHER), CipherData.class);
     }
     protected JWTVerifier verifier() {

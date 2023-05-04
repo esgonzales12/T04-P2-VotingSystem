@@ -65,7 +65,7 @@ public class VoteCastingDisplay extends StackPane {
         };
     }
 
-    private EventHandler<MouseEvent> exitHandler() {
+    protected EventHandler<MouseEvent> exitHandler() {
         return voterExit -> {
             setVisible(false);
             displayManager

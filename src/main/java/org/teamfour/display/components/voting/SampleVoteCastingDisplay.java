@@ -34,4 +34,14 @@ public class SampleVoteCastingDisplay extends VoteCastingDisplay {
         };
     }
 
+    @Override
+    protected EventHandler<MouseEvent> exitHandler() {
+        return voterExit -> {
+            setVisible(false);
+            displayManager.resolve(new ResolutionRequest.Builder()
+                            .withType(RequestType.OPERATION_EXIT)
+                            .build());
+        };
+    }
+
 }

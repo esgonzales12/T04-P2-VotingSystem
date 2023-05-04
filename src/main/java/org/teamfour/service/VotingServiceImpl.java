@@ -17,14 +17,19 @@ public class VotingServiceImpl extends LogBase implements VotingService {
     RegistryFacade registryFacade;
     List<Ballot> ballots;
     public VotingServiceImpl(RegistryFacade registryFacade){
-        super("VotingService");
+        super(VotingServiceImpl.class.getName());
         this.votingDao = new VotingDao();
         this.registryFacade = registryFacade;
         this.ballots = new ArrayList<>();
     }
     public Ballot saveBallot(org.teamfour.model.bsl.Ballot ballot){
         Ballot newBallot = votingDao.saveBallot(ballot);
-        this.ballots.add(newBallot);
+        if (newBallot == null) {
+            log.info("ERROR SAVING BALLOT");
+        } else {
+            log.info("BALLOT SAVED SUCCESSFULLY");
+            this.ballots.add(newBallot);
+        }
         return newBallot;
     }
     public boolean voterLogin(String voterAccessCode){
@@ -53,6 +58,7 @@ public class VotingServiceImpl extends LogBase implements VotingService {
     public boolean recordVotes(List<Vote> votes, String voterAccessCode){
         String sql;
         int count = 0;
+        log.info("RECORDING VOTES");
         for(Vote vote : votes){
             if (vote.getValue() == null) {
                 log.error("VOTE VALUE IS NULL FOR VOTE: " + vote);
@@ -75,9 +81,10 @@ public class VotingServiceImpl extends LogBase implements VotingService {
         RegistryMessage response = registryFacade.handleRequest(message);
 
         if (response.getType() == Registry.MessageType.ERROR) {
-            log.info("ERROR UPDATING VOTER STATUS");
+            log.error("ERROR UPDATING VOTER STATUS");
             return false;
         }
+        log.info("SUCCESSFULLY UPDATED VOTER STATUS");
         return true;
     }
     public  Ballot findBallot(Integer id){
