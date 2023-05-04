@@ -1,0 +1,216 @@
+{
+  "location": "123 Main St.",
+  "date": "2023-11-05",
+  "name": "General Election",
+  "instructions": "Please select one candidate per contest",
+  "sections": [
+    {
+      "name": "Statewide Candidates",
+      "items": [
+        {
+          "type": "contest",
+          "name": "Governor",
+          "description": "Vote for your preferred candidate for governor",
+          "allowedSelections": 1,
+          "candidates": [
+            {"name": "Jane Doe", "party": "Democratic"},
+            {"name": "John Smith", "party": "Republican"}
+          ]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition 123",
+          "description": "A proposition about something important",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition A",
+          "description": "This proposition aims to increase funding for public schools.",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition B",
+          "description": "This proposition proposes a new tax on sugary drinks.",
+          "allowedSelections": 1,
+          "options": ["For", "Against"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition C",
+          "description": "This proposition aims to reduce greenhouse gas emissions by 50% by 2030.",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition D",
+          "description": "This proposition proposes a ban on single-use plastic bags.",
+          "allowedSelections": 1,
+          "options": ["For", "Against"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition E",
+          "description": "This proposition proposes a minimum wage increase to $15 per hour.",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition F",
+          "description": "This proposition proposes a new law to reduce police brutality.",
+          "allowedSelections": 1,
+          "options": ["For", "Against"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition G",
+          "description": "This proposition proposes a new tax on luxury goods.",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition H",
+          "description": "This proposition aims to increase funding for mental health services.",
+          "allowedSelections": 1,
+          "options": ["For", "Against"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition I",
+          "description": "This proposition proposes a new law to reduce homelessness.",
+          "allowedSelections": 1,
+          "options": ["Yes", "No"]
+        },
+        {
+          "type": "proposition",
+          "name": "Proposition J",
+          "description": "This proposition proposes a new law to increase public transportation funding.",
+          "allowedSelections": 1,
+          "options": ["For", "Against"]
+        }
+      ]
+    },
+    {
+      "name": "Local Candidates",
+      "items":[
+        {
+          "type": "contest",
+          "name": "President",
+          "allowedSelections": 1,
+          "candidates": [
+            {
+              "name": "John Doe",
+              "party": "Democratic Party"
+            },
+            {
+              "name": "Jane Smith",
+              "party": "Republican Party"
+            },
+            {
+              "name": "Bob Johnson",
+              "party": "Green Party"
+            }
+          ]
+        },
+        {
+          "type": "contest",
+          "name": "Senator",
+          "allowedSelections": 2,
+          "candidates": [
+            {
+              "name": "Mike Williams",
+              "party": "Libertarian Party"
+            },
+            {
+              "name": "Alice Brown",
+              "party": "Democratic Party"
+            },
+            {
+              "name": "Tom Lee",
+              "party": "Republican Party"
+            }
+          ]
+        },
+        {
+          "type": "contest",
+          "name": "Governor",
+          "allowedSelections": 1,
+          "candidates": [
+            {
+              "name": "Samantha Miller",
+              "party": "Green Party"
+            },
+            {
+              "name": "Michael Davis",
+              "party": "Democratic Party"
+            },
+            {
+              "name": "Emily Garcia",
+              "party": "Republican Party"
+            }
+          ]
+        },
+        {
+          "type": "contest",
+          "name": "Mayor",
+          "allowedSelections": 1,
+          "candidates": [
+            {
+              "name": "David Wilson",
+              "party": "Libertarian Party"
+            },
+            {
+              "name": "Sophia Johnson",
+              "party": "Democratic Party"
+            },
+            {
+              "name": "Jacob Martinez",
+              "party": "Republican Party"
+            }
+          ]
+        },
+        {
+          "type": "contest",
+          "name": "City Council",
+          "allowedSelections": 3,
+          "candidates": [
+            {
+              "name": "Ella Hernandez",
+              "party": "Green Party"
+            },
+            {
+              "name": "Noah Kim",
+              "party": "Democratic Party"
+            },
+            {
+              "name": "Oliver Smith",
+              "party": "Republican Party"
+            },
+            {
+              "name": "Isabella Davis",
+              "party": "Libertarian Party"
+            }
+          ]
+        },
+        {
+          "type": "contest",
+          "name": "Mayor",
+          "description": "Vote for your preferred candidate for mayor",
+          "allowedSelections": 1,
+          "candidates": [
+            {"name": "Bob Johnson", "party": "Independent"},
+            {"name": "Sally Lee", "party": "Democratic"},
+            {"name": "Mike Smith", "party": "Republican"}
+          ]
+        }
+      ]
+
+    }
+  ]
+}

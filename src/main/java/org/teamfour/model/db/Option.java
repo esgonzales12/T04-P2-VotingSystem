@@ -23,6 +23,9 @@ public class Option {
     @Column(name = "choice")
     private String choice;
 
+    @Column(name = "count")
+    private Integer count;
+
     public Option(Integer id, Integer itemId, String firstname, String party, String option) {
         this.id = id;
         this.itemId = itemId;
@@ -55,6 +58,10 @@ public class Option {
         return itemId;
     }
 
+    public Integer getCount() {
+        return count;
+    }
+
     @Override
     public String toString() {
         return "Option{" +
@@ -65,5 +72,4 @@ public class Option {
                 ", option='" + choice + '\'' +
                 '}';
     }
-
 }

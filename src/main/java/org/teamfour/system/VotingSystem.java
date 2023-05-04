@@ -13,4 +13,6 @@ public interface VotingSystem {
 
     SystemResponse handleRequest(SystemRequest request);
 
+    boolean validDeviceConnected();
+
 }

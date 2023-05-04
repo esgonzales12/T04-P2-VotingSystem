@@ -26,20 +26,20 @@ public class SystemBase extends LogBase {
         cipherData = JsonUtil.getJsonObj(CipherData.class, SystemFiles.CIPHER);
         metadata = JsonUtil.getJsonObj(Metadata.class, SystemFiles.META);
     }
-    private JWTVerifier verifier() {
+    protected JWTVerifier verifier() {
         return  JWT.require(Algorithm.HMAC256(cipherData.getTokenSecret()))
                 .withIssuer(cipherData.getTokenIssuer())
                 .build();
     }
 
-    private String issueToken(Long userId, String username, Authority authority) {
+    protected String issueToken(String username, Authority authority) {
         return JWT.create()
                 .withIssuer(cipherData.getTokenIssuer())
                 .withClaim("AUTHORITY", authority.toString())
                 .sign(Algorithm.HMAC256(cipherData.getTokenSecret()));
     }
 
-    private String hash(String input) {
+    protected String hash(String input) {
         StringBuilder hexString = new StringBuilder();
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -59,7 +59,7 @@ public class SystemBase extends LogBase {
         return hexString.toString();
     }
 
-    private String encrypt(String value) {
+    protected String encrypt(String value) {
         byte[] encryptedValue;
         try {
             SecretKeySpec keySpec = new SecretKeySpec(
@@ -76,7 +76,7 @@ public class SystemBase extends LogBase {
         return Base64.getEncoder().encodeToString(encryptedValue);
     }
 
-    private String decrypt(String value) {
+    protected String decrypt(String value) {
         byte[] decryptedValue;
         try {
             SecretKeySpec keySpec = new SecretKeySpec(

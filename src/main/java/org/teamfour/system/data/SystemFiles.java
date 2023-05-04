@@ -9,6 +9,12 @@ public class SystemFiles {
     private static final String SYSTEM_DIR = "sys";
     private static final String SYSTEM_DATA = "data";
     private static final String SYSTEM_STORE = "store";
+
+    public static final String DEVICE_PATH = new PathBuilder(File.separator)
+            .withExtension("device")
+            .withExtension("")
+            .build();
+
     public static final String STORE_PATH = new PathBuilder(File.separator)
             .withExtension(SYSTEM_DIR)
             .withExtension("store")

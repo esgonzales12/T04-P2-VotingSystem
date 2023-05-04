@@ -1,5 +1,9 @@
 package org.teamfour;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.teamfour.dao.VotingDao;
@@ -7,17 +11,20 @@ import org.teamfour.model.bsl.Ballot;
 import org.teamfour.registry.dao.RegistryDao;
 import org.teamfour.registry.data.RegisteredVoter;
 import org.teamfour.registry.data.Registry;
+import org.teamfour.system.data.Claims;
 import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
+import org.teamfour.system.enums.Authority;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     private static final String[] NAMES = {"Emily Garcia", "Julian Patel", "Hannah Nguyen", "Owen Lee", "Eva Kim", "Isabella Chen", "Aiden Smith", "Avery Taylor", "Mason Wong", "Sophia Rodriguez"};
@@ -35,10 +42,48 @@ public class Main {
         return null;
     }
 
+    private static String encrypt(String value) {
+        byte[] encryptedValue;
+        try {
+            SecretKeySpec keySpec = new SecretKeySpec(
+                    "546Q6T09HCM5KAEC2RLLBD4SYUVQ9OQ2".getBytes(),
+                    "AES");
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, keySpec);
+            encryptedValue = cipher.doFinal(value.getBytes());
+        } catch (Exception e) {
+            System.out.println("UNABLE TO ENCRYPT");
+            return null;
+        }
+        return Base64.getEncoder().encodeToString(encryptedValue);
+    }
+
+    private static String issueToken(String username, Authority authority) {
+        return JWT.create()
+                .withIssuer("auth0")
+                .withClaim(Claims.AUTHORITY, authority.toString())
+                .withClaim(Claims.USERNAME, username)
+                .sign(Algorithm.HMAC256("FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4"));
+    }
+
     public static void main(String[] args) {
+//        try (FileReader fileReader = new FileReader(SystemFiles.DEVICE_PATH + "auth.json")) {
+//            HashMap token = new Gson().fromJson(fileReader, HashMap.class);
+//            System.out.println(token.get("token"));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+        String token = issueToken("VotingAdministrator", Authority.SYSTEM_ADMIN);
+        JWTVerifier verifier = JWT.require(Algorithm.HMAC256("FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4"))
+                .withIssuer("auth0")
+                .build();
+        DecodedJWT decodedJWT = verifier.verify(token);
+        System.out.println(decodedJWT.getClaim(Claims.AUTHORITY).as(Authority.class) == Authority.SYSTEM_ADMIN);
+        System.exit(0);
+//        System.out.println(encrypt());
+
         Metadata metadata = fetchSystemData();
         System.out.println(metadata.toString());
-        System.exit(0);
         RegistryDao dao = new RegistryDao();
         System.out.println(SystemFiles.REGISTRY_DB_PATH);
         for (int i = 0; i < NAMES.length; i++) {
