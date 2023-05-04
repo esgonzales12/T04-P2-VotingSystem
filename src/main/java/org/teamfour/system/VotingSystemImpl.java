@@ -61,7 +61,9 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
                 }
             }
             case VOTER_LOGIN -> {
-                if (votingService.voterLogin(request.getVoterAccessCode())) {
+                log.info("SENDING REGISTRY REQUEST FOR VOTER: "  + request.getVoterAccessCode());
+                boolean hasVoted = votingService.voterLogin(request.getVoterAccessCode());
+                if (hasVoted) {
                     return SystemResponse.builder()
                             .type(SystemResponseType.SUCCESS)
                             .build();
@@ -146,7 +148,7 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
         try {
             org.teamfour.model.db.Ballot ballot = votingService.findBallot(systemMetadata.getElectionId());
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            String output = gson.toJson(ballot, Ballot.class);
+            String output = gson.toJson(ballot, org.teamfour.model.db.Ballot.class);
             Files.writeString(Path.of(fileName), output, StandardCharsets.UTF_8);
             return new File(fileName).exists();
         } catch (IOException e) {

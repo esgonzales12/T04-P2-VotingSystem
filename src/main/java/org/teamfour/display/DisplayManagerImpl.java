@@ -1,13 +1,21 @@
 package org.teamfour.display;
 
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import org.teamfour.display.components.common.IdleScreen;
 import org.teamfour.display.components.common.LoadingScreen;
 import org.teamfour.display.components.voting.SampleVoteCastingDisplay;
@@ -38,6 +46,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.teamfour.system.enums.SystemRequestType;
 import org.teamfour.system.enums.SystemResponseType;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 
 public class DisplayManagerImpl extends StackPane implements DisplayManager {
     private final Logger log;
@@ -162,6 +175,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                 .withVotes(request.getVotes())
                 .withVoterAccessCode(currentVoterCode == null ? "" : currentVoterCode)
                 .build());
+        log.info("VOTE CASTING RECEIVED RESPONSE:" + response.toString());
         Platform.runLater(() -> {
             PlaceHolder placeHolder = new PlaceHolder();
             placeHolder.text.setText(response.getResponseType() == SystemResponseType.FAILURE ?
@@ -184,7 +198,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
             if (response.getResponseType() == SystemResponseType.FAILURE) {
                 PlaceHolder placeHolder = new PlaceHolder();
                 placeHolder.text.setText("Unable to perform login, please try again or speak to a polling official.");
-                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoteCastingDisplay(ballot, this)));
+                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoterLogin(this)));
                 clearAndPush(placeHolder);
             } else {
                 currentVoterCode = request.getVoterAccessCode();
@@ -205,8 +219,32 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                 getChildren().add(voterLogin);
             }
             case VOTE_COUNTING -> {
-                // TODO: CREATE VOTE COUNT VIEW
-                clearAndPush(new IdleScreen(Status.VOTE_COUNTING));
+                Ballot countBallot = votingSystem.getBallot();
+                Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                String ballotJson = gson.toJson(countBallot);
+                ScrollPane scrollPane = new ScrollPane();
+                try {
+                    JsonNode jsonNodeTree = new ObjectMapper().readTree(ballotJson);
+                    String ballotYaml = new YAMLMapper().writeValueAsString(jsonNodeTree);
+                    Text title = new Text("Vote Tabulation Results\n\n");
+                    title.getStyleClass().setAll("h1", "strong");
+                    title.setFill(Color.WHITE);
+
+                    Text count = new Text(ballotYaml);
+                    count.getStyleClass().setAll("h4", "code", "strong");
+                    count.setFill(Color.WHITE);
+
+                    VBox box = new VBox(new TextFlow(title, count));
+                    box.setAlignment(Pos.CENTER);
+                    box.setBackground(Background.fill(Color.valueOf("#006ee5")));
+                    scrollPane.setContent(box);
+                } catch (JsonProcessingException e) {
+                    log.error(e.getMessage());
+                }
+                scrollPane.setFitToHeight(true);
+                scrollPane.setFitToWidth(true);
+
+                clearAndPush(scrollPane);
             }
         }
     }
@@ -224,6 +262,7 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                     .build()));
         } else {
             placeHolder.text.setText(OperationPrompts.COMPLETION_PROMPTS.get(operation));
+            if (operation == Operation.CONFIGURATION) ballot = votingSystem.getBallot();
             EventHandler<MouseEvent> continueHandler = operation == Operation.CONFIGURATION ?
                     exit -> clearAndPush(new SampleVoteCastingDisplay(ballot, this))
                     : exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build());

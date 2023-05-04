@@ -19,6 +19,10 @@ public class DemoFacadeImpl implements RegistryFacade {
             case GET_VOTER_STATUS -> {
                 if (!voters.containsKey(request.getVoterAccessCode())) {
                     voters.put(request.getVoterAccessCode(), Registry.VoteStatus.NOT_VOTED);
+                    return new RegistryMessage.Builder()
+                            .setType(Registry.MessageType.VOTER_STATUS)
+                            .setVoterStatus(Registry.VoteStatus.NOT_VOTED)
+                            .build();
                 } else {
                     String status = voters.get(request.getVoterAccessCode());
                     return new RegistryMessage.Builder()

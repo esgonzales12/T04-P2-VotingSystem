@@ -12,6 +12,7 @@ import org.teamfour.registry.dao.RegistryDao;
 import org.teamfour.registry.data.RegisteredVoter;
 import org.teamfour.registry.data.Registry;
 import org.teamfour.system.data.Claims;
+import org.teamfour.system.data.DeviceFiles;
 import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.enums.Authority;
@@ -42,73 +43,15 @@ public class Main {
         return null;
     }
 
-    private static String encrypt(String value) {
-        byte[] encryptedValue;
-        try {
-            SecretKeySpec keySpec = new SecretKeySpec(
-                    "546Q6T09HCM5KAEC2RLLBD4SYUVQ9OQ2".getBytes(),
-                    "AES");
-            Cipher cipher = Cipher.getInstance("AES");
-            cipher.init(Cipher.ENCRYPT_MODE, keySpec);
-            encryptedValue = cipher.doFinal(value.getBytes());
-        } catch (Exception e) {
-            System.out.println("UNABLE TO ENCRYPT");
-            return null;
-        }
-        return Base64.getEncoder().encodeToString(encryptedValue);
-    }
-
-    private static String issueToken(String username, Authority authority) {
-        return JWT.create()
-                .withIssuer("auth0")
-                .withClaim(Claims.AUTHORITY, authority.toString())
-                .withClaim(Claims.USERNAME, username)
-                .sign(Algorithm.HMAC256("FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4"));
-    }
 
     public static void main(String[] args) {
-//        try (FileReader fileReader = new FileReader(SystemFiles.DEVICE_PATH + "auth.json")) {
-//            HashMap token = new Gson().fromJson(fileReader, HashMap.class);
-//            System.out.println(token.get("token"));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-        String token = issueToken("VotingAdministrator", Authority.SYSTEM_ADMIN);
-        JWTVerifier verifier = JWT.require(Algorithm.HMAC256("FNI7WU6ONH46R9NXE9QFHNJAA9QCIA3MSIXJ19343KLVBOR5VU3GZF2UEF920IP4"))
-                .withIssuer("auth0")
-                .build();
-        DecodedJWT decodedJWT = verifier.verify(token);
-        System.out.println(decodedJWT.getClaim(Claims.AUTHORITY).as(Authority.class) == Authority.SYSTEM_ADMIN);
-        System.exit(0);
-//        System.out.println(encrypt());
-
-        Metadata metadata = fetchSystemData();
-        System.out.println(metadata.toString());
-        RegistryDao dao = new RegistryDao();
-        System.out.println(SystemFiles.REGISTRY_DB_PATH);
-        for (int i = 0; i < NAMES.length; i++) {
-            RegisteredVoter voter = new RegisteredVoter.Builder()
-                .setName(NAMES[i])
-                .setAddress(ADDRESSES[i])
-                .setDemographicHash(hash(NAMES[i] + ADDRESSES[i]).substring(0, 6).toUpperCase())
-                .setVoteStatus(Registry.VoteStatus.NOT_VOTED)
-                .createRegisteredVoter();
-            dao.create(voter);
-        }
-
-        List<RegisteredVoter> voterList = dao.getVoters();
-        voterList.forEach(System.out::println);
-
-        System.exit(0);
-
-
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .create();
 
         String path = "src/main/resources/sample/ballot.json";
         VotingDao votingDao = new VotingDao();
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.DEVICE_PATH + DeviceFiles.BALLOT))) {
             Ballot ballot = gson.fromJson(br, Ballot.class);
             votingDao.saveBallot(ballot);
             System.out.println(ballot);
