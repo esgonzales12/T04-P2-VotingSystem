@@ -55,7 +55,7 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
                         .build();
             }
             case CAST_VOTE -> {
-                boolean recorded = votingService.recordVotes(request.getVotes(), getBallot().getId());
+                boolean recorded = votingService.recordVotes(request.getVotes(), request.getVoterAccessCode());
                 if (recorded) {
                     // TODO: CALL VVPAT
                     return SystemResponse.builder()
