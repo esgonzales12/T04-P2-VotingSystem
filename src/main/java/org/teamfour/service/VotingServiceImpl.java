@@ -11,6 +11,7 @@ import org.teamfour.registry.data.RegistryMessage;
 
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class VotingServiceImpl implements VotingService{
@@ -71,12 +72,17 @@ public class VotingServiceImpl implements VotingService{
 
     }
     public  Ballot findBallot(Integer id){
-        for (Ballot ballot: ballots) {
-            if (Objects.equals(ballot.getId(), id)){
-                return ballot;
-            }
+        String sql = String.format(
+                """
+                SELECT * FROM BALLOT
+                WHERE id = %d;
+                """, id);
+        try {
+            return votingDao.selectOne(Ballot.class, sql).get();
+        } catch (NoSuchElementException e){
+            return null;
         }
-        return null;
+
     }
     public  void countVotes(Integer id){
 
