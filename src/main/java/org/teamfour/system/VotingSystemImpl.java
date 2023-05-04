@@ -48,21 +48,20 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
             }
             case VOTE_FINALIZE -> {
                 votingService.countVotes(getBallot().getId());
+                // TODO: CALL VVPAT
                 return SystemResponse.builder()
                         .type(SystemResponseType.SUCCESS)
                         .build();
             }
             case CAST_VOTE -> {
-
+                boolean recorded = votingService.recordVotes(request.getVotes(), getBallot().getId());
             }
 
 
 
 
             case VOTER_LOGIN -> {
-                String username = request.getAdminUsername();
-                String password = request.getAdminPassword();
-                if (votingService.voterLogin("")) {
+                if (votingService.voterLogin(request.getVoterAccessCode())) {
                     return SystemResponse.builder()
                             .type(SystemResponseType.SUCCESS)
                             .build();

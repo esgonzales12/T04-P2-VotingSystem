@@ -12,6 +12,7 @@ public class SystemRequest {
     private final Operation operation;
     private final String adminUsername;
     private final String adminPassword;
+    private final String voterAccessCode;
     private final List<Vote> votes;
 
     public SystemRequest(Builder builder) {
@@ -20,6 +21,7 @@ public class SystemRequest {
         this.adminPassword = builder.adminPassword;
         this.type = builder.type;
         this.votes = builder.votes;
+        this.voterAccessCode = builder.accessCode;
     }
 
     public SystemRequestType getType() {
@@ -45,7 +47,13 @@ public class SystemRequest {
                 '}';
     }
 
+    public String getVoterAccessCode() {
+        return voterAccessCode;
+    }
 
+    public List<Vote> getVotes() {
+        return votes;
+    }
 
 
     public static class Builder {
@@ -53,6 +61,7 @@ public class SystemRequest {
         private String adminUsername;
         private String adminPassword;
         private SystemRequestType type;
+        private String accessCode;
         private List<Vote> votes;
 
 
@@ -78,6 +87,11 @@ public class SystemRequest {
 
         public Builder withVotes(List<Vote> votes) {
             this.votes = votes;
+            return this;
+        }
+
+        public Builder withVoterAccessCode(String accessCode) {
+            this.accessCode = accessCode;
             return this;
         }
 

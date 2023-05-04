@@ -57,13 +57,6 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         init();
     }
 
-    private void init() {
-        LoadingScreen startupScreen = new LoadingScreen();
-        startupScreen.setBackground(Background.fill(Color.BLACK));
-        startupScreen.setText("Voting System - Start Up");
-        clearAndPush(startupScreen);
-    }
-
     @Override
     public ResolutionResponse resolve(ResolutionRequest request) {
         log.info("RESOLUTION REQUEST RECEIVED: " + request.getType());
@@ -110,41 +103,6 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         return null;
     }
 
-    private void handleVoteCast(ResolutionRequest request) {
-        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
-                .withType(SystemRequestType.CAST_VOTE)
-                .withVotes(request.getVotes())
-                .build());
-        Platform.runLater(() -> {
-            PlaceHolder placeHolder = new PlaceHolder();
-            placeHolder.text.setText(response.getResponseType() == SystemResponseType.FAILURE ?
-                    "An error occurred while recording your vote. Please speak to a polling official."
-                        : "Your vote has been recorded.");
-            placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoterLogin(this)));
-            clearAndPush(placeHolder);
-        });
-    }
-
-    private void handleVoterLogin(ResolutionRequest request) {
-        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
-                        .withType(SystemRequestType.ADMIN_LOGIN)
-                        .withAdminUsername(request.getAdminUsername())
-                        .withAdminPassword(request.getAdminPassword())
-                        .build());
-        if (ballot == null) {
-            ballot = votingSystem.getBallot();
-        }
-        Platform.runLater(() -> {
-            if (response.getResponseType() == SystemResponseType.FAILURE) {
-                PlaceHolder placeHolder = new PlaceHolder();
-                placeHolder.text.setText("Unable to perform login, please try again or speak to a polling official.");
-                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoteCastingDisplay(ballot, this)));
-                clearAndPush(placeHolder);
-            }
-            clearAndPush(new VoteCastingDisplay(ballot, this));
-        });
-    }
-
     @Override
     public void dispatchOperation(Operation operation) {
         log.info("DISPATCHING: " + operation);
@@ -189,6 +147,41 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         }
     }
 
+    private void handleVoteCast(ResolutionRequest request) {
+        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                .withType(SystemRequestType.CAST_VOTE)
+                .withVotes(request.getVotes())
+                .build());
+        Platform.runLater(() -> {
+            PlaceHolder placeHolder = new PlaceHolder();
+            placeHolder.text.setText(response.getResponseType() == SystemResponseType.FAILURE ?
+                    "An error occurred while recording your vote. Please speak to a polling official."
+                    : "Your vote has been recorded.");
+            placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoterLogin(this)));
+            clearAndPush(placeHolder);
+        });
+    }
+
+    private void handleVoterLogin(ResolutionRequest request) {
+        SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
+                .withType(SystemRequestType.ADMIN_LOGIN)
+                .withAdminUsername(request.getAdminUsername())
+                .withAdminPassword(request.getAdminPassword())
+                .build());
+        if (ballot == null) {
+            ballot = votingSystem.getBallot();
+        }
+        Platform.runLater(() -> {
+            if (response.getResponseType() == SystemResponseType.FAILURE) {
+                PlaceHolder placeHolder = new PlaceHolder();
+                placeHolder.text.setText("Unable to perform login, please try again or speak to a polling official.");
+                placeHolder.exit.setOnMouseClicked(exit -> clearAndPush(new VoteCastingDisplay(ballot, this)));
+                clearAndPush(placeHolder);
+            }
+            clearAndPush(new VoteCastingDisplay(ballot, this));
+        });
+    }
+
     private void statusDispatch(Status status) {
         switch (status) {
             case PRE_ELECTION, POST_ELECTION -> {
@@ -207,18 +200,12 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
         }
     }
 
-    private void clearAndPush(Node node) {
-        getChildren().clear();
-        displayStack.add(node);
-        getChildren().add(node);
-    }
-
     private void performOperation(Operation operation) {
         PlaceHolder placeHolder = new PlaceHolder();
         SystemResponse response = votingSystem.handleRequest(new SystemRequest.Builder()
-                        .withType(SystemRequestType.OPERATION)
-                        .withOperation(operation)
-                        .build());
+                .withType(SystemRequestType.OPERATION)
+                .withOperation(operation)
+                .build());
         if (response.getResponseType() == SystemResponseType.FAILURE) {
             placeHolder.text.setText("Unable to complete operation " + operation + " at this time.");
             placeHolder.exit.setOnMouseClicked(exit -> resolve(new ResolutionRequest.Builder()
@@ -228,10 +215,23 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
             placeHolder.text.setText(OperationPrompts.COMPLETION_PROMPTS.get(operation));
             EventHandler<MouseEvent> continueHandler = operation == Operation.CONFIGURATION ?
                     exit -> clearAndPush(new SampleVoteCastingDisplay(ballot, this))
-                        : exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build());
+                    : exit -> resolve(new ResolutionRequest.Builder().withType(RequestType.OPERATION_EXIT).build());
             placeHolder.exit.setOnMouseClicked(continueHandler);
         }
         Platform.runLater(() -> clearAndPush(placeHolder));
+    }
+
+    private void init() {
+        LoadingScreen startupScreen = new LoadingScreen();
+        startupScreen.setBackground(Background.fill(Color.BLACK));
+        startupScreen.setText("Voting System - Start Up");
+        clearAndPush(startupScreen);
+    }
+
+    private void clearAndPush(Node node) {
+        getChildren().clear();
+        displayStack.add(node);
+        getChildren().add(node);
     }
 
     private Status systemStatus() {

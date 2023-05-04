@@ -11,7 +11,7 @@ public interface VotingService {
 
     Ballot saveBallot(org.teamfour.model.bsl.Ballot ballot);
     boolean voterLogin(String voterAccessCode);
-    boolean recordVotes(List<Vote> votes);
+    boolean recordVotes(List<Vote> votes, Integer ballotId);
     Ballot findBallot(Integer id);
     void countVotes(Integer id);
     Map<Option, Integer> getTabulation(Integer id);
