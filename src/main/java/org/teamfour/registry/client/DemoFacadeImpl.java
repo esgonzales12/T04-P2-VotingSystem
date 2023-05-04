@@ -1,5 +1,6 @@
 package org.teamfour.registry.client;
 
+import org.teamfour.registry.RegistryFacade;
 import org.teamfour.registry.data.Registry;
 import org.teamfour.registry.data.RegistryMessage;
 

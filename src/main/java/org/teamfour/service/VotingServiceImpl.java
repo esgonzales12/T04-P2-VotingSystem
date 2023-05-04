@@ -4,7 +4,7 @@ import org.teamfour.dao.VotingDao;
 import org.teamfour.display.components.voting.common.VoteValue;
 import org.teamfour.logging.LogBase;
 import org.teamfour.model.db.*;
-import org.teamfour.registry.client.RegistryFacade;
+import org.teamfour.registry.RegistryFacade;
 import org.teamfour.registry.data.Registry;
 import org.teamfour.registry.data.RegistryMessage;
 

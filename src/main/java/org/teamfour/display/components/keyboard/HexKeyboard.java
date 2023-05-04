@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
-import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.components.KeyPressListener;
 import org.teamfour.display.util.Icons;
 import org.teamfour.display.util.KeyCodes;
 

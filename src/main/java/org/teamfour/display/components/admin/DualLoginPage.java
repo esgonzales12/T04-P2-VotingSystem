@@ -13,12 +13,12 @@ import javafx.scene.text.TextFlow;
 import javafx.util.Duration;
 import org.apache.commons.lang3.StringUtils;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
+import org.teamfour.display.DisplayManager;
 import org.teamfour.display.components.common.LoadingScreen;
 import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.display.enums.RequestType;
 import org.teamfour.display.enums.ResponseType;
-import org.teamfour.display.DisplayManager;
 import org.teamfour.system.enums.Operation;
 
 import java.util.ArrayList;

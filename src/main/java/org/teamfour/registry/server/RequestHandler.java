@@ -1,4 +1,4 @@
-package org.teamfour.registry;
+package org.teamfour.registry.server;
 
 import org.apache.commons.lang3.StringUtils;
 import org.teamfour.registry.dao.RegistryDao;

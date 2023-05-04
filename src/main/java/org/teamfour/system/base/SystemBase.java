@@ -1,15 +1,13 @@
-package org.teamfour.system;
+package org.teamfour.system.base;
 
-import com.google.gson.Gson;
-import org.teamfour.logging.LogBase;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.google.gson.Gson;
+import org.teamfour.logging.LogBase;
 import org.teamfour.system.data.CipherData;
-import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.enums.Authority;
-import org.teamfour.util.JsonUtil;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;

@@ -10,10 +10,6 @@ import org.teamfour.model.db.Option;
 import org.teamfour.model.db.Section;
 import org.teamfour.model.enums.ItemType;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class VotingDao extends DaoBase {
     private static final String BALLOT_COLS = "(name, instructions, location, date)";
     private static final String SECTION_COLS = "(ballotId, name)";

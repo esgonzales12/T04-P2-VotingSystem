@@ -10,13 +10,11 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import org.apache.commons.lang3.StringUtils;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
-import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.DisplayManager;
+import org.teamfour.display.components.KeyPressListener;
 import org.teamfour.display.components.keyboard.QwertyKeyboard;
 import org.teamfour.display.data.ResolutionRequest;
-import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.display.enums.RequestType;
-import org.teamfour.display.enums.ResponseType;
-import org.teamfour.display.DisplayManager;
 import org.teamfour.display.util.KeyCodes;
 
 public class VoterLogin extends Panel implements KeyPressListener {

@@ -1,6 +1,9 @@
 package org.teamfour.display;
 
-import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.animation.AnimationTimer;
@@ -16,13 +19,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.teamfour.display.components.admin.AdminMenu;
+import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.common.IdleScreen;
 import org.teamfour.display.components.common.LoadingScreen;
 import org.teamfour.display.components.voting.SampleVoteCastingDisplay;
-import org.teamfour.display.components.voting.VoterLogin;
-import org.teamfour.display.components.admin.AdminMenu;
-import org.teamfour.display.components.admin.DualLoginPage;
 import org.teamfour.display.components.voting.VoteCastingDisplay;
+import org.teamfour.display.components.voting.VoterLogin;
 import org.teamfour.display.data.ResolutionRequest;
 import org.teamfour.display.data.ResolutionResponse;
 import org.teamfour.display.enums.Notification;
@@ -37,20 +42,13 @@ import org.teamfour.system.data.SystemRequest;
 import org.teamfour.system.data.SystemResponse;
 import org.teamfour.system.enums.Operation;
 import org.teamfour.system.enums.Status;
+import org.teamfour.system.enums.SystemRequestType;
+import org.teamfour.system.enums.SystemResponseType;
 
 import java.time.Duration;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.concurrent.atomic.AtomicBoolean;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.teamfour.system.enums.SystemRequestType;
-import org.teamfour.system.enums.SystemResponseType;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 
 public class DisplayManagerImpl extends StackPane implements DisplayManager {
     private final Logger log;

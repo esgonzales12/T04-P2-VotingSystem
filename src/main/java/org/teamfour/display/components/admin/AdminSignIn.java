@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.VBox;
-import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.components.KeyPressListener;
 import org.teamfour.display.components.keyboard.HexKeyboard;
 import org.teamfour.display.util.ColorTheme;
 import org.teamfour.display.util.KeyCodes;

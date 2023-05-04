@@ -8,6 +8,7 @@ import org.teamfour.model.bsl.Ballot;
 import org.teamfour.registry.client.DemoFacadeImpl;
 import org.teamfour.service.VotingService;
 import org.teamfour.service.VotingServiceImpl;
+import org.teamfour.system.base.SystemBase;
 import org.teamfour.system.data.*;
 import org.teamfour.system.enums.Authority;
 import org.teamfour.system.enums.Operation;

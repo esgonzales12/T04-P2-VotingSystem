@@ -1,4 +1,4 @@
-package org.teamfour.registry.client;
+package org.teamfour.registry;
 
 import org.teamfour.registry.data.RegistryMessage;
 

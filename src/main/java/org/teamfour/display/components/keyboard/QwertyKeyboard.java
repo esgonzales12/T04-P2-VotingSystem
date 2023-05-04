@@ -4,7 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import org.teamfour.display.KeyPressListener;
+import org.teamfour.display.components.KeyPressListener;
 import org.teamfour.display.util.KeyCodes;
 
 public class QwertyKeyboard extends VBox {

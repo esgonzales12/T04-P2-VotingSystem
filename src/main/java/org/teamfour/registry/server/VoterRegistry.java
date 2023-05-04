@@ -1,4 +1,4 @@
-package org.teamfour.registry;
+package org.teamfour.registry.server;
 
 import org.teamfour.logging.StaticLogBase;
 

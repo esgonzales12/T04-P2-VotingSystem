@@ -3,10 +3,10 @@ package org.teamfour.display.components.voting;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
-import org.teamfour.display.components.common.LoadingScreen;
-import org.teamfour.display.enums.RequestType;
 import org.teamfour.display.DisplayManager;
+import org.teamfour.display.components.common.LoadingScreen;
 import org.teamfour.display.data.ResolutionRequest;
+import org.teamfour.display.enums.RequestType;
 import org.teamfour.model.db.Ballot;
 import org.teamfour.model.db.Vote;
 

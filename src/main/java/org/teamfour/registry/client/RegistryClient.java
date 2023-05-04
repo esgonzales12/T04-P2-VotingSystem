@@ -3,8 +3,8 @@ package org.teamfour.registry.client;
 import org.teamfour.registry.data.RegistryMessage;
 
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
