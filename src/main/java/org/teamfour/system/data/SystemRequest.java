@@ -1,7 +1,13 @@
 package org.teamfour.system.data;
 
+import org.teamfour.model.db.Ballot;
+import org.teamfour.model.db.Vote;
+import org.teamfour.system.VotingSystem;
 import org.teamfour.system.enums.Operation;
 import org.teamfour.system.enums.RequestType;
+import org.teamfour.service.VotingService;
+
+import java.util.List;
 
 public class SystemRequest {
     private final RequestType type;
@@ -39,6 +45,10 @@ public class SystemRequest {
                 '}';
     }
 
+    public List<Vote> getVotes() {
+
+        return null;
+    }
 
 
 

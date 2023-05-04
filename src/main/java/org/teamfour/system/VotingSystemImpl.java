@@ -5,6 +5,7 @@ import org.teamfour.display.enums.ResponseType;
 import org.teamfour.logging.LogBase;
 import org.teamfour.model.bsl.Ballot;
 import org.teamfour.model.db.Option;
+import org.teamfour.model.db.Vote;
 import org.teamfour.service.VotingService;
 import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
@@ -16,7 +17,9 @@ import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class VotingSystemImpl extends LogBase implements VotingSystem {
@@ -43,14 +46,31 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
                         .build();
             }
             case VOTE_FINALIZE -> {
+                votingService.countVotes(getBallot().getId());
+                return SystemResponse.builder()
+                        .type(ResponseType.SUCCESS)
+                        .build();
             }
             case CAST_VOTE -> {
+                List<Vote> votes = request.getVotes();
+                boolean areVotesRecorded = votingService.recordVotes(votes);
+                ResponseType responseType = areVotesRecorded ? ResponseType.SUCCESS : ResponseType.FAILURE;
+                return SystemResponse.builder()
+                        .type(responseType)
+                        .build();
+            }
 
-            }
+
+
+
             case VOTER_LOGIN -> {
+                boolean isAuthenticated = votingService.voterLogin(request.getAdminUsername());
+                ResponseType responseType = isAuthenticated ? ResponseType.SUCCESS : ResponseType.FAILURE;
+                return SystemResponse.builder()
+                        .type(responseType)
+                        .build();
             }
-            case ADMIN_LOGIN -> {
-            }
+
         }
         return null;
     }
