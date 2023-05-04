@@ -1,4 +1,4 @@
-package org.teamfour.display.components;
+package org.teamfour.display.components.voting;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.TextField;
@@ -57,15 +57,10 @@ public class VoterLogin extends Panel implements KeyPressListener {
         } else if (displayManager == null) {
             System.out.println("NO MANAGER PROVIDED");
         } else {
-            ResolutionResponse response = displayManager.resolve(
-                    new ResolutionRequest.Builder()
-                            .withType(RequestType.VOTER_LOGIN)
-                            .withAccessCode(code)
-                            .build());
-
-            if (response.getResponseType() != ResponseType.SUCCESS) {
-                invalidAccessCode();
-            }
+            displayManager.resolve(new ResolutionRequest.Builder()
+                                        .withType(RequestType.VOTER_LOGIN)
+                                        .withAccessCode(code)
+                                        .build());
         }
         accessCodeField.clear();
     }
