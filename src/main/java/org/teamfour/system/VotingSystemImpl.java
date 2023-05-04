@@ -26,7 +26,7 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
     private final Metadata systemMetadata;
     private final VotingService votingService;
 
-    public VotingSystemImpl(String logIdentifier) throws IOException {
+    public VotingSystemImpl() throws IOException {
         this.systemMetadata = fetchSystemData();
         this.votingService = new VotingServiceImpl(new DemoFacadeImpl());
     }
@@ -42,7 +42,7 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
                         .build();
             }
             case VOTE_FINALIZE -> {
-                // TODO: CALL VVPAT
+                log.info("PRINTING TO VVPAT");
                 return SystemResponse.builder()
                         .type(SystemResponseType.SUCCESS)
                         .build();
@@ -70,6 +70,11 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
                             .type(SystemResponseType.FAILURE)
                             .build();
                 }
+            }
+            case ADMIN_LOGIN -> {
+                return SystemResponse.builder()
+                        .type(SystemResponseType.SUCCESS)
+                        .build();
             }
         }
         return null;
@@ -173,6 +178,10 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
         try (BufferedReader br = new BufferedReader(new FileReader(SystemFiles.DEVICE_PATH + DeviceFiles.BALLOT))) {
             org.teamfour.model.bsl.Ballot ballot = new Gson().fromJson(br, Ballot.class);
             org.teamfour.model.db.Ballot dbBallot = votingService.saveBallot(ballot);
+            if (dbBallot == null) {
+                log.error("ERROR SAVING BALLOT");
+                return false;
+            }
             systemMetadata.setElectionId(dbBallot.getId());
             systemMetadata.setStatus(Status.PRE_ELECTION);
             updateSystemData();
@@ -180,7 +189,6 @@ public class VotingSystemImpl extends SystemBase implements VotingSystem {
         }  catch (IOException ignored) {
             log.error("");
         }
-
         return false;
     }
 

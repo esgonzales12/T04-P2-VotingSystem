@@ -136,10 +136,17 @@ public class DisplayManagerImpl extends StackPane implements DisplayManager {
                 statusDispatch(systemStatus());
             }
             case DEVICE_CONNECT -> {
-                deviceConnected.set(true);
-                AdminMenu adminMenu = new AdminMenu(this,
-                        AllowedOperations.ALLOWED_OPERATIONS.get(systemStatus()));
-                clearAndPush(adminMenu);
+                boolean valid = votingSystem.validDeviceConnected();
+                if (valid) {
+                    deviceConnected.set(true);
+                    AdminMenu adminMenu = new AdminMenu(this,
+                            AllowedOperations.ALLOWED_OPERATIONS.get(systemStatus()));
+                    clearAndPush(adminMenu);
+                } else {
+                    PlaceHolder placeHolder = new PlaceHolder();
+                    placeHolder.text.setText("Invalid device connected, please contact vendor.");
+                    placeHolder.exit.setOnMouseClicked(event -> statusDispatch(systemStatus()));
+                }
             }
             case DEVICE_DISCONNECT -> {
                 getChildren().clear();

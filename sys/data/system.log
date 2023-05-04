@@ -153,3 +153,266 @@
 2023-01-30 18:01:44.111 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
 2023-01-30 18:01:47.928 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
 2023-30-03 13:30:37.708 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - UNABLE TO OPEN CONNECTION
+2023-30-04 10:30:04.834 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-32-04 10:32:41.540 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-32-04 10:32:44.607 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-32-04 10:32:44.788 ${sys:env} [JavaFX Application Thread] INFO  VotingSystem - TOKEN RETRIEVED, CLAIMS: authority=SYSTEM_ADMIN, username=VotingAdministrator
+2023-32-04 10:32:54.170 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-33-04 10:33:00.554 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-34-04 10:34:33.744 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-34-04 10:34:36.255 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-34-04 10:34:36.431 ${sys:env} [JavaFX Application Thread] INFO  VotingSystem - TOKEN RETRIEVED, CLAIMS: authority=SYSTEM_ADMIN, username=VotingAdministrator
+2023-34-04 10:34:37.031 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTING_WINDOW
+2023-34-04 10:34:42.178 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-34-04 10:34:47.494 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-34-04 10:34:47.495 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-34-04 10:34:51.184 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: OPERATION_EXIT
+2023-34-04 10:34:53.355 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-34-04 10:34:58.856 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-34-04 10:34:58.864 ${sys:env} [JavaFX Application Thread] INFO  VotingSystem - TOKEN RETRIEVED, CLAIMS: authority=SYSTEM_ADMIN, username=VotingAdministrator
+2023-35-04 10:35:04.312 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: BEGIN_VOTE_COUNTING
+2023-35-04 10:35:06.416 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DOOR_OPEN
+2023-35-04 10:35:07.699 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_DISCONNECT
+2023-35-04 10:35:11.861 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: VOTER_LOGIN
+2023-38-04 10:38:28.845 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-38-04 10:38:54.731 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: STARTUP_COMPLETE
+2023-39-04 10:39:00.613 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RECEIVED NOTIFICATION: DEVICE_CONNECT
+2023-39-04 10:39:00.787 ${sys:env} [JavaFX Application Thread] INFO  VotingSystem - TOKEN RETRIEVED, CLAIMS: authority=SYSTEM_ADMIN, username=VotingAdministrator
+2023-39-04 10:39:01.737 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - DISPATCHING: CONFIGURATION
+2023-39-04 10:39:06.005 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-39-04 10:39:09.302 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN
+2023-39-04 10:39:09.303 ${sys:env} [JavaFX Application Thread] INFO  org.teamfour.display.DisplayManagerImpl - RESOLUTION REQUEST RECEIVED: ADMIN_LOGIN_COMPLETE
+2023-39-04 10:39:11.712 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.713 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.731 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.731 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.746 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.746 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.764 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.765 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.780 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.780 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.797 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.797 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.814 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.814 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.830 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.830 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.846 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.846 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.864 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.864 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.880 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.881 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.897 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.897 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.913 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.913 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.929 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.929 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.947 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.947 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.963 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.963 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.979 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.979 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:11.996 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:11.997 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.013 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.013 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.029 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.030 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.045 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.046 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.063 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.063 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.080 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.080 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.095 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.095 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.113 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.113 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.130 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.130 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.145 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.146 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.163 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.163 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.180 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.180 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.196 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.196 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.213 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.213 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.228 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.229 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.246 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.246 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.263 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.263 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.280 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.280 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.295 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.295 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.313 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.313 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.330 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.330 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.345 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.346 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.362 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.362 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.379 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.379 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.396 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.396 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.413 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.413 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.428 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.428 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.446 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.446 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.462 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.462 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.479 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.480 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.495 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.496 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.513 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.513 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.528 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.528 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.546 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.546 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.562 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.562 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.578 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.578 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.595 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.595 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.612 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.613 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.629 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.629 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.646 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.646 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.662 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.662 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.679 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.679 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.695 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.695 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.713 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.713 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.729 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.729 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.745 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.745 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.762 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.763 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.779 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.779 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.796 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.796 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.812 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.812 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.829 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.829 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.846 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.846 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.862 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.863 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.878 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.878 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.895 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.895 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.911 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.911 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.929 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.929 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.944 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.945 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.962 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.962 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.978 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.978 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:12.995 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:12.995 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.011 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.011 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.029 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.029 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.045 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.045 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.062 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.062 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.078 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.078 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.095 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.095 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.112 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.112 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.128 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.128 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.145 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.145 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.162 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.162 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.178 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.178 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.195 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.195 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.211 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.211 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.229 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.229 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.245 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.245 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.265 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.265 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.278 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.278 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.296 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.296 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.312 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.313 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.329 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.329 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.345 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.345 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.362 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.363 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.378 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.378 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.395 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.395 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.412 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.412 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.429 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.429 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.445 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.446 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.461 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.461 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.478 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.478 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.495 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.495 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.512 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.512 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.528 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.528 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.545 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.545 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.562 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.562 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.578 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.578 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.595 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.596 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.612 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.612 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.629 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.629 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)
+2023-39-04 10:39:13.652 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - SQL EXCEPTION ON SAVE
+2023-39-04 10:39:13.652 ${sys:env} [JavaFX Application Thread] ERROR org.teamfour.logging.StaticLogBase - [SQLITE_ERROR] SQL error or missing database (no such table: ballot)

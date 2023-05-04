@@ -24,7 +24,7 @@ public class SystemBase extends LogBase {
     private final CipherData cipherData;
 
     public SystemBase() throws FileNotFoundException {
-        super(SystemBase.class.getName());
+        super("VotingSystem");
         cipherData = new Gson().fromJson(new FileReader(SystemFiles.CIPHER), CipherData.class);
     }
     protected JWTVerifier verifier() {
