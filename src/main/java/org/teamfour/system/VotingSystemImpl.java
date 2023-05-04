@@ -7,6 +7,7 @@ import org.teamfour.model.bsl.Ballot;
 import org.teamfour.model.db.Option;
 import org.teamfour.model.db.Vote;
 import org.teamfour.service.VotingService;
+import org.teamfour.service.VotingServiceImpl;
 import org.teamfour.system.data.Metadata;
 import org.teamfour.system.data.SystemFiles;
 import org.teamfour.system.data.SystemRequest;
@@ -31,7 +32,7 @@ public class VotingSystemImpl extends LogBase implements VotingSystem {
     public VotingSystemImpl(String logIdentifier) {
         super(VotingSystemImpl.class.getName());
         this.systemMetadata = fetchSystemData();
-        this.votingService = null;
+        this.votingService = new VotingServiceImpl();
     }
     public void startVoteWindow() {
         status = Status.IN_PROCESS;
